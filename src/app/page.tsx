@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Button from "./_components/Button";
 import FeatureCard from "./_components/FeatureCard";
 import Image from "next/image";

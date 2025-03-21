@@ -1,21 +1,11 @@
 'use client'
 import React from 'react'
-import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Image from 'next/image';
 
 
 const TeamCarousel = () => {
-    const settings = {
-      dots: true,
-      infinite: true,
-      slidesToShow: 3,
-      slidesToScroll: 3,
-      speed: 10000,
-      gap:'100px',
-      pauseOnHover:true
-    };
 const Team: { id: number; name: string; title: string; imageUrl: string }[] = [
   {
     id: 1,

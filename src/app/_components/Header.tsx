@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Button from './Button';
 import { useRouter } from 'next/navigation';
 import { RiMenu3Fill } from "react-icons/ri";
-import { RxCaretDown, RxCaretRight } from 'react-icons/rx';
+import {  RxCaretRight } from 'react-icons/rx';
 const Header = () => {
   const [open, setOpen] = React.useState(false);
   const [menu,setMenu] = useState(false);

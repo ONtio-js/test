@@ -10,31 +10,33 @@ const WaitListForm = () => {
         label="Full Name"
         placeholder="Type Your Name"
         type="text"
-        onchange={""}
+ 
       />
       <InputField
         label="Email Address"
         placeholder="Type Your Email Address"
         type="email"
-        onchange={""}
+      
       />
       <InputField
         label="Phone Number"
         placeholder="Type Your Phone Number"
         type="text"
-        onchange={""}
+    
       />
       <InputField
         label="Location"
         placeholder="Type Your Location eg. Lagos, Nigeria"
         type="text"
-        onchange={""}
+        
       />
-      <div className='flex items-center gap-2 my-3'>
-        <input type='checkbox' className='size-4 accent-primaryColor' />
-        <p className='text-muted-foreground'>Get the latest Grevego and exclusive offers.</p>
+      <div className="my-3 flex items-center gap-2">
+        <input type="checkbox" className="size-4 accent-primaryColor" />
+        <p className="text-muted-foreground">
+          Get the latest Grevego and exclusive offers.
+        </p>
       </div>
-      <Button title='Submit' variant='primary' style='my-5'/>
+      <Button title="Submit" variant="primary" style="my-5" />
     </form>
   );
 }

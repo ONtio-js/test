@@ -3,7 +3,6 @@ import Logo from './Logo'
 import Image from 'next/image'
 import Link from 'next/link';
 import { TbMailFilled } from "react-icons/tb";
-import { FaFacebook,FaTwitter,FaInstagram,FaWhatsapp } from "react-icons/fa";
 import { PiTrademarkLight } from "react-icons/pi";
 
 import FeatureCard from './FeatureCard';

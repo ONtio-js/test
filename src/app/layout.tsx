@@ -2,11 +2,7 @@ import "@/styles/globals.css";
 
 import { GeistSans } from "geist/font/sans";
 import { type Metadata } from "next";
-
 import { TRPCReactProvider } from "@/trpc/react";
-import Logo from "./_components/Logo";
-import Link from "next/link";
-import Button from "./_components/Button";
 import Header from "./_components/Header";
 import Footer from "./_components/Footer";
 

@@ -1,7 +1,6 @@
 import React from "react";
 import Button from "../_components/Button";
 import Image from "next/image";
-import InputField from "../_components/InputField";
 const AgentPage = () => {
   const whyChooseGrevego = [
     {
@@ -286,9 +285,6 @@ const AgentPage = () => {
               src="https://docs.google.com/forms/d/e/1FAIpQLSfCKOjjWOD2NOgJT3WPxeyUSvNJ5Cu6kvYdERWr4z_ZajlYIg/viewform?embedded=true"
               width="300"
               height="500"
-              frameborder="0"
-              marginheight="0"
-              marginwidth="0"
               className="no-scrollbar w-full"
             >
               Loading…

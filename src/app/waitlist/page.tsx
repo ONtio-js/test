@@ -17,8 +17,8 @@ const page = () => {
           Thank you for joining Grevego
         </h3>
         <p className="py-2 text-center text-sm text-gray-600">
-          You're on the list! We'll keep you updated with exclusive perks and
-          launch details soon. 🚀
+          You are on the list! We will keep you updated with exclusive perks and
+          launch details soon. 
         </p>
       </div>
       <div className="flex flex-col items-start justify-around gap-10 md:px-20 py-10 lg:flex-row">

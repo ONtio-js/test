@@ -1,10 +1,9 @@
 import React from 'react'
 
-const InputField = ({label,type,placeholder,onchange}:{
+const InputField = ({label,type,placeholder}:{
     label:string;
     type:string;
     placeholder:string;
-    onchange:()=>void;
 }) => {
   return (
     <div className='w-full my-1'>
@@ -15,7 +14,7 @@ const InputField = ({label,type,placeholder,onchange}:{
         <input
           type={type}
           placeholder={placeholder}
-          onChange={onchange}
+       
           className="border-none bg-transparent outline-none focus:border-none focus:outline-none"
         />
       </div>

@@ -1,9 +1,8 @@
 import React from 'react'
 import Button from '../_components/Button';
 import Image from 'next/image';
-import FeatureCard from '../_components/FeatureCard';
+
 import Carousel from '../_components/Carousel';
-import { title } from 'process';
 import TeamCarousel from '../_components/TeamCarousel';
  export const ourDefinition: {
    id: number;

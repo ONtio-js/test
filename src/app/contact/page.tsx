@@ -3,7 +3,6 @@ import React from 'react'
 import InputField from '../_components/InputField';
 import Button from '../_components/Button';
 import { IoLocationSharp } from "react-icons/io5";
-import { FaFacebook, FaInstagram, FaTwitter, FaWhatsapp } from 'react-icons/fa';
 import Image from 'next/image';
 
 const page = () => {
@@ -30,19 +29,19 @@ const page = () => {
                 label="Name"
                 type="text"
                 placeholder="Type your Name"
-                onchange={() => ""}
+             
               />
               <InputField
                 label="Email Address"
                 type="email"
                 placeholder="Type your email address"
-                onchange={() => ""}
+                
               />
               <InputField
                 label="Subject"
                 type="text"
                 placeholder="Type your message subject"
-                onchange={() => ""}
+              
               />
               <textarea
                 name=""
