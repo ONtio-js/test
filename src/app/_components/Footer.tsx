@@ -191,7 +191,7 @@ const Footer = () => {
               <a href="#" target="_blank">
                 <Image
                   src={"/home/icons/x.svg"}
-                  width={24}
+                  width={20}
                   height={100}
                   alt="x"
                 />

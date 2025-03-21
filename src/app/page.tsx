@@ -312,9 +312,9 @@ export default async function Home() {
         <div className="my-10 flex flex-col items-center gap-5">
           <div className="relative">
             <Image
-              src={"/globe.svg"}
-              width={1000}
-              height={100}
+              src={"/globe.png"}
+              width={800}
+              height={800}
               alt="world globe"
               className="my-10"
               priority
