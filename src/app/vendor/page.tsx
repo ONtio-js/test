@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "../_components/Button";
 import Image from "next/image";
+import InputField from "../_components/InputField";
 const AgentPage = () => {
   const whyChooseGrevego = [
     {
@@ -231,7 +232,7 @@ const AgentPage = () => {
               your information
             </h4>
           </div>
-          {/* <form action="" className="flex w-[600px] flex-col gap-2">
+          <form action="" className="flex w-[600px] flex-col gap-2 pb-20">
             <InputField
               label="Business Name"
               placeholder="Type Your Business name"
@@ -279,17 +280,8 @@ const AgentPage = () => {
               title="submit"
               style="w-[30%] mx-auto mt-2"
             />
-          </form> */}
-          <div className="h-auto">
-            <iframe
-              src="https://docs.google.com/forms/d/e/1FAIpQLSfCKOjjWOD2NOgJT3WPxeyUSvNJ5Cu6kvYdERWr4z_ZajlYIg/viewform?embedded=true"
-              width="300"
-              height="500"
-              className="no-scrollbar w-full"
-            >
-              Loading…
-            </iframe>
-          </div>
+          </form>
+        
         </div>
       </section>
     </>

@@ -4,6 +4,7 @@ import Image from 'next/image';
 
 import Carousel from '../_components/Carousel';
 import TeamCarousel from '../_components/TeamCarousel';
+import ButtonComponent from './ButtonComponent';
  export const ourDefinition: {
    id: number;
    title: string;
@@ -45,14 +46,7 @@ const AboutPage = () => {
           convenience. Our mission is to empower communities with eco-friendly
           shopping, smarter nutrition, and green technology.
         </p>
-        <div className="mt-10 flex justify-center">
-          <Button
-            title="Join the Movement"
-            variant="primary"
-            type="link"
-            style=""
-          />
-        </div>
+        <ButtonComponent />
         <div className="mt-16 flex items-center justify-center">
           <Image
             src={"/home/about/about-hero.png"}
@@ -200,10 +194,10 @@ const AboutPage = () => {
             className="mt-10 w-full rounded-3xl"
           />
         </div>
-        <div className="overflow-hidden py-10 pt-20">
-          <h2 className="mb-10 text-center text-2xl font-bold text-gray-700">
-            Our Leadership
-          </h2>
+        <h2 className="mb-10 pt-20 text-center text-2xl font-bold text-gray-700">
+          Our Leadership
+        </h2>
+        <div className="no-scrollbar overflow-x-scroll pb-10">
           <TeamCarousel />
         </div>
       </section>

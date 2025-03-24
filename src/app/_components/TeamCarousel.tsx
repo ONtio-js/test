@@ -27,8 +27,8 @@ const Team: { id: number; name: string; title: string; imageUrl: string }[] = [
   },
 ];
   return (
-    <div className="no-scrollbar min-w-[1000px] overflow-x-scroll">
-      <div className="grid grid-cols-3 gap-x-20">
+   
+      <div className="grid grid-cols-3 md:gap-x-20 min-w-[800px] gap-x-10">
         {Team.map((person) => (
           <div key={person.id} className="flex flex-col items-center gap-5">
             <div className="rounded-3xl bg-gray-100/70 p-10 pb-0">
@@ -48,7 +48,7 @@ const Team: { id: number; name: string; title: string; imageUrl: string }[] = [
           </div>
         ))}
       </div>
-    </div>
+
   );
 }
 

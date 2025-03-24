@@ -1,7 +1,9 @@
+"use client";
+import { useRouter } from "next/navigation";
 import Button from "./_components/Button";
 import FeatureCard from "./_components/FeatureCard";
 import Image from "next/image";
-export default async function Home() {
+export default  function Home() {
   const features = [
     {
       id: 1,
@@ -48,6 +50,7 @@ export default async function Home() {
         "Receive solar-cooled, eco-friendly delivery at your doorstep.",
     },
   ];
+  const router = useRouter();
   return (
     <>
       {/* begining of hero section */}
@@ -65,16 +68,16 @@ export default async function Home() {
               title="join waitlist"
               variant="primary"
               type="link"
-              url="/waitlist"
+              onclick={() => router.push("/waitlist")}
               style="w-[250px] md:max-w-[300px] py-4"
             />
           </div>
-          <div className="no-scrollbar flex items-center gap-2 overflow-x-scroll pt-10 lg:gap-4">
-            <FeatureCard title="Reduce Food Waste" />
-            <FeatureCard title="Support Local Farmers" />
-            <FeatureCard title="Personalized Nutrition" />
-            <FeatureCard title="Clean Energy Solutions" />
-          </div>
+        </div>
+        <div className="no-scrollbar flex w-full items-center gap-2 overflow-x-scroll pl-5 pt-10 md:justify-center lg:gap-4">
+          <FeatureCard title="Reduce Food Waste" />
+          <FeatureCard title="Support Local Farmers" />
+          <FeatureCard title="Personalized Nutrition" />
+          <FeatureCard title="Clean Energy Solutions" />
         </div>
         <div className="relative my-16 w-full overflow-y-hidden">
           <div className="no-scrollbar flex items-center gap-3 overflow-y-hidden overflow-x-scroll md:gap-7 lg:justify-center">
@@ -168,7 +171,7 @@ export default async function Home() {
                 alt={feature.title}
                 height={100}
                 width={200}
-                className="w-full h-1/2 rounded-lg"
+                className="h-1/2 w-full rounded-lg"
               />
               <h3 className="py-2 pt-10 text-xl font-semibold capitalize">
                 {feature.title}
@@ -258,12 +261,12 @@ export default async function Home() {
             redefining how businesses and individuals can contribute to a
             healthier planet.
           </p>
-          <div className="flex items-center pt-10 lg:gap-4">
-            <FeatureCard colored title="Reduce Food Waste" />
-            <FeatureCard colored title="Support Local Farmers" />
-            <FeatureCard colored title="Personalized Nutrition" />
-            <FeatureCard colored title="Clean Energy Solutions" />
-          </div>
+        </div>
+        <div className="flex items-center pt-10 lg:gap-4 overflow-x-scroll no-scrollbar md:justify-center ">
+          <FeatureCard colored title="Reduce Food Waste" />
+          <FeatureCard colored title="Support Local Farmers" />
+          <FeatureCard colored title="Personalized Nutrition" />
+          <FeatureCard colored title="Clean Energy Solutions" />
         </div>
         <div className="grid grid-cols-4 items-end gap-2 pt-20 md:gap-5">
           <Image
@@ -321,8 +324,12 @@ export default async function Home() {
             />
           </div>
           <div className="flex items-center gap-10">
-            <Button title="Explore Market  " variant="primary" />
-            <Button title="Join as a Vendor" type="link" variant="secondary" />
+            <Button
+              title="Join as a Vendor"
+              type="link"
+              variant="secondary"
+              onclick={() => router.push("/vendor")}
+            />
           </div>
         </div>
       </section>

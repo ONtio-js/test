@@ -1,3 +1,4 @@
+'use client';
 import React from 'react'
 import Logo from './Logo'
 import Image from 'next/image'
@@ -7,7 +8,9 @@ import { PiTrademarkLight } from "react-icons/pi";
 
 import FeatureCard from './FeatureCard';
 import Button from './Button';
+import { useRouter } from 'next/navigation';
 const Footer = () => {
+  const router = useRouter();
   return (
     <>
       <section className="bg-primaryColor py-32">
@@ -26,14 +29,14 @@ const Footer = () => {
             type="link"
             style="text-white border-white mt-10"
             secondary={false}
-            url='/agent'
+            onclick={() => router.push("/agent")}
           />
-          <div className="flex items-center gap-2 pt-10 lg:gap-4">
-            <FeatureCard title="Reduce Food Waste" />
-            <FeatureCard title="Support Local Farmers" />
-            <FeatureCard title="Personalized Nutrition" />
-            <FeatureCard title="Clean Energy Solutions" />
-          </div>
+        </div>
+        <div className="flex items-center md:justify-center gap-2 overflow-x-scroll no-scrollbar pl-5 pt-10 lg:gap-4">
+          <FeatureCard title="Reduce Food Waste" />
+          <FeatureCard title="Support Local Farmers" />
+          <FeatureCard title="Personalized Nutrition" />
+          <FeatureCard title="Clean Energy Solutions" />
         </div>
         <div className="relative my-20 overflow-y-hidden">
           <div className="no-scrollbar flex items-center gap-4 overflow-x-scroll lg:justify-center">
@@ -94,17 +97,19 @@ const Footer = () => {
         </div>
       </section>
       <footer className="flex flex-col px-5 py-20 text-muted-foreground md:items-center lg:px-20">
-        <div className="grid items-start gap-y-10 md:grid-cols-4">
+        <div className="grid items-start gap-y-10 md:grid-cols-2 lg:grid-cols-4">
           <div className="lg:max-w-[300px]">
             <Logo width={100} height={100} />
             <p className="py-4">
               Revolutionizing food system through technology and sustainability
             </p>
             <p>
-              <a href="mailto:info@grevego.com">info@grevego.com</a>
+              <a href="grevegohq@gmail.com" target="_blankk">
+                grevegohq@gmail.com
+              </a>
             </p>
             <p className="py-3">
-              <a href="tel:+2348236457843">+2348236457843</a>
+              <a href="tel:+2349053306268">+2349053306268 </a>
             </p>
             <p>1 Muta abiru close maryland Ikeja</p>
           </div>
@@ -188,7 +193,7 @@ const Footer = () => {
                   alt="x"
                 />
               </a>
-              <a href="#" target="_blank">
+              <a href="https://x.com/grevego_hq?s=21" target="_blank">
                 <Image
                   src={"/home/icons/x.svg"}
                   width={20}
@@ -196,7 +201,10 @@ const Footer = () => {
                   alt="x"
                 />
               </a>
-              <a href="#" target="_blank">
+              <a
+                href="https://www.instagram.com/grevego.hq?igsh=bmprb2plNHltN2tj&utm_source=qr"
+                target="_blank"
+              >
                 <Image
                   src={"/home/icons/instagram.svg"}
                   width={24}
@@ -204,7 +212,7 @@ const Footer = () => {
                   alt="x"
                 />
               </a>
-              <a href="#" target="_blank">
+              <a href="https://x.com/grevego_hq?s=21" target="_blank">
                 <Image
                   src={"/home/icons/whatsapp.svg"}
                   width={24}

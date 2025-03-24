@@ -3,6 +3,7 @@ import Button from "../_components/Button";
 import Image from "next/image";
 import InputField from "../_components/InputField";
 
+
 const VendorPage = () => {
   const whyChooseGrevego = [
     {
