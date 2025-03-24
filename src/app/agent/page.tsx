@@ -7,9 +7,8 @@ const VendorPage = () => {
   const whyChooseGrevego = [
     {
       id: 1,
-      title: "Expand your reach",
-      description:
-        "Get discovered by more eco-conscious customers in your area and beyond.",
+      title: "Flexible earnings",
+      description: "Work when you want, as much as you want.",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -34,9 +33,8 @@ const VendorPage = () => {
     },
     {
       id: 2,
-      title: "seamless order management",
-      description:
-        "Manage your inventory, orders, and deliveries with our easy-to-use dashboard.",
+      title: "eco-friendly deliveries",
+      description: "Help reduce carbon footprints with our green logistics.",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -69,8 +67,8 @@ const VendorPage = () => {
     },
     {
       id: 3,
-      title: "sustainable cold storage",
-      description: "Keep products fresh and safe with solar powered cooling.",
+      title: "fast & reliable payments",
+      description: "Get paid quickly and securely.",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -95,9 +93,8 @@ const VendorPage = () => {
     },
     {
       id: 4,
-      title: "Fast & relaible delivery",
-      description:
-        "Reduce your carbon footprint with our sustainable delivery options.",
+      title: "support & community",
+      description: "Training and assistance for new riders.",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -181,10 +178,10 @@ const VendorPage = () => {
         </div>
         <div className="px-10 py-20">
           <h2 className="py-5 text-center text-2xl font-semibold capitalize text-gray-700 md:text-4xl">
-            getting started is easy
+            how it works
           </h2>
           <p className="text-center text-gray-700">
-            Start Delivering in 4 Simple Steps
+            Start Delivering in 3 Simple Steps
           </p>
         </div>
         <div className="mb-20 grid items-center px-5 md:grid-cols-2 md:gap-5 lg:gap-10">
@@ -192,7 +189,7 @@ const VendorPage = () => {
             <div className="my-5 rounded-2xl bg-gray-50 p-5">
               <h3 className="text-lg font-semibold">Fill the Form</h3>
               <p className="pt-2 text-sm text-gray-600">
-                Fill the vendor form in minutes
+                submit required document and complete onboarding
               </p>
             </div>
             <div className="my-5 rounded-2xl bg-gray-50 p-5">
@@ -204,7 +201,7 @@ const VendorPage = () => {
             <div className="my-5 rounded-2xl bg-gray-50 p-5">
               <h3 className="text-lg font-semibold">Start Selling</h3>
               <p className="pt-2 text-sm text-gray-600">
-                Receive and manage orders seamlessly.
+                Deliver, earn and mae an impact!
               </p>
             </div>
           </div>

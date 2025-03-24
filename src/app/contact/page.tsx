@@ -8,40 +8,37 @@ import Image from 'next/image';
 const page = () => {
   return (
     <>
-      <section className="mt-10 md:-mt-10 px-5 md:px-20 text-gray-700">
+      <section className="mt-10 px-5 text-gray-700 md:-mt-10 md:px-20">
         <div className="flex flex-col items-center py-10">
-          <h2 className="max-w-[800px] text-center text-2xl md:text-5xl font-bold">
+          <h2 className="max-w-[800px] text-center text-2xl font-bold md:text-5xl">
             We’re Here to Help – Let’s Build a Greener Future Together
           </h2>
-          <p className="text-center mt-5 md:pt-8">
+          <p className="mt-5 text-center md:pt-8">
             Whether you’re a vendor, partner, or customer, we’d love to hear
             from you
           </p>
         </div>
-        <div className="mt-20 -mx-5 md:mx-0 grid gap-y-10 lg:grid-cols-2">
+        <div className="-mx-5 my-20 mb-40 grid gap-y-10 md:mx-0 lg:grid-cols-2">
           <div>
             <form
               action=""
-              className="flex px-10 flex-col items-center gap-y-5 border-gray-300 md:pr-10 lg:items-start lg:border-r lg:pr-20"
+              className="flex flex-col items-center gap-y-5 border-gray-300 px-10 md:pr-10 lg:items-start lg:border-r lg:pr-20"
             >
               <h3 className="text-2xl font-semibold">Submit a Request</h3>
               <InputField
                 label="Name"
                 type="text"
                 placeholder="Type your Name"
-             
               />
               <InputField
                 label="Email Address"
                 type="email"
                 placeholder="Type your email address"
-                
               />
               <InputField
                 label="Subject"
                 type="text"
                 placeholder="Type your message subject"
-              
               />
               <textarea
                 name=""
@@ -58,21 +55,11 @@ const page = () => {
                 />
               </div>
             </form>
-            <div className="my-20 hidden lg:block">
-              <h2 className="py-5 text-2xl font-semibold">
-                Our Office Locations
-              </h2>
-              <div className="h-[100px] rounded-xl bg-primaryColor/10 px-3 pt-5">
-                <p className="flex items-center gap-2">
-                  <IoLocationSharp size={30} />1 Muba Abiru Close, Ebute Ikorodu
-                  Lagos
-                </p>
-              </div>
-            </div>
+           
           </div>
-          <div className="flex flex-col md:items-center gap-10 p-5 md:p-10 lg:items-start lg:gap-8 lg:p-20">
+          <div className="flex flex-col gap-10 p-5 md:items-center md:p-10 lg:items-start lg:gap-8 lg:p-20">
             <div>
-              <h3 className="pb-3 md:text-center text-2xl font-semibold lg:text-left">
+              <h3 className="pb-3 text-2xl font-semibold md:text-center lg:text-left">
                 Get in Touch
               </h3>
               <p className="md:px-32 md:text-center lg:px-0 lg:text-left">
@@ -81,11 +68,11 @@ const page = () => {
               </p>
             </div>
 
-            <div className="flex flex-col  md:items-center lg:items-start">
+            <div className="flex flex-col md:items-center lg:items-start">
               <h3 className="pb-3 text-2xl font-medium">Chat with us</h3>
               <p>Our friendly team is here to help</p>
               <p className="py-2 font-semibold text-primaryColor">
-                <a href="mailto:info@grevego. com">info@grevego.com</a>
+                <a href="mailto:grevegohq@gmail. com">grevegohq@gmail.com</a>
               </p>
             </div>
 
@@ -93,12 +80,11 @@ const page = () => {
               <h3 className="pb-3 text-2xl font-medium">Call us</h3>
               <p>We are here to help with any question you may have.</p>
               <p className="pt-2 font-semibold text-primaryColor">
-                <a href="tel:+2346778789347">+2346778789347</a> {",  "}
-                <a href="tel:+2346778789347">+2346778789347</a>
+                <a href="tel:+2349053306268">+2349053306268</a> {",  "}
               </p>
             </div>
 
-            <div className="mb-20 md:mb-0 flex flex-col md:items-center lg:items-start">
+            <div className="mb-20 flex flex-col md:mb-0 md:items-center lg:items-start">
               <h3 className="pb-3 text-2xl font-medium">Socials</h3>
               <p>Find us across social platforms and feel free to reach out!</p>
               <div className="flex items-center gap-5 pt-2">

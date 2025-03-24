@@ -45,7 +45,7 @@ const Carousel = () => {
     };
 
   return (
-    <div className="min-w-[1400px]">
+    <div className="min-w-[1400px] h-[500px]">
       <Slider {...settings}>
         <div>
           <Image

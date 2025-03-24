@@ -8,11 +8,11 @@ export default async function Home() {
       title: "Green Retailing",
       description:
         "Sustainable marketplace connecting consumers with fresh, local produce while minimizing environmental impact.",
-      imgUrl: "/home/features/feature1.png",
+      imgUrl: "/home/features/feature4.png",
     },
     {
       id: 2,
-      title: "cold chain delivery",
+      title: "cold last mile delivery",
       description:
         "Temperature-controlled last-mile delivery ensuring maximum freshness and minimal food waste.",
       imgUrl: "/home/features/feature1.png",
@@ -53,14 +53,14 @@ export default async function Home() {
       {/* begining of hero section */}
       <section className="w-full py-10">
         <div className="lg:px-30 flex flex-col items-center gap-4 px-10">
-          <h1 className="max-w-[500px] py-4 text-center text-3xl font-bold md:text-5xl">
-            Fresh Food, Sustainable Future
+          <h1 className="max-w-[500px] py-4 text-center text-3xl font-bold md:text-5xl md:leading-snug">
+            Healthy Food, Sustainable Future
           </h1>
           <p className="text-center text-sm text-gray-700">
-            Revolutionizing Food Systems Through Technology and Sustainability
+            Revolutionizing food access through green retailing, smart delivery,
+            and AI-powered nutrition guidance.
           </p>
           <div className="flex w-full flex-col items-center justify-center gap-7 py-5 md:flex-row">
-          
             <Button
               title="join waitlist"
               variant="primary"
@@ -77,7 +77,7 @@ export default async function Home() {
           </div>
         </div>
         <div className="relative my-16 w-full overflow-y-hidden">
-          <div className="no-scrollbar flex items-center gap-3 overflow-y-hidden overflow-x-scroll lg:justify-center md:gap-7">
+          <div className="no-scrollbar flex items-center gap-3 overflow-y-hidden overflow-x-scroll md:gap-7 lg:justify-center">
             <Image
               src={"/home/hero2.svg"}
               alt="hero"
@@ -87,7 +87,7 @@ export default async function Home() {
               priority
             />
             <Image
-              src={"/home/hero1.svg"}
+              src={"/home/hero-1.svg"}
               alt="hero"
               width={600}
               height={100}
@@ -168,7 +168,7 @@ export default async function Home() {
                 alt={feature.title}
                 height={100}
                 width={200}
-                className="w-full rounded-lg"
+                className="w-full h-1/2 rounded-lg"
               />
               <h3 className="py-2 pt-10 text-xl font-semibold capitalize">
                 {feature.title}
@@ -265,7 +265,7 @@ export default async function Home() {
             <FeatureCard colored title="Clean Energy Solutions" />
           </div>
         </div>
-        <div className="grid grid-cols-4 items-end gap-2 md:gap-5 pt-20">
+        <div className="grid grid-cols-4 items-end gap-2 pt-20 md:gap-5">
           <Image
             src={"/home/user-1.jpeg"}
             alt="hero"

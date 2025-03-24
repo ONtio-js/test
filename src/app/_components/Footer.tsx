@@ -150,10 +150,10 @@ const Footer = () => {
                 Be the first to know. Get the latest on healthy living and
                 sustainability
               </p>
-              <div className="mt-10 flex w-full items-center justify-evenly rounded-[32px] bg-secondaryColor px-4">
-                <TbMailFilled className="size-10 text-xl" />
+              <div className="mt-10 flex w-full items-center justify-evenly rounded-[32px] bg-gray-100 px-4">
+                <TbMailFilled className="size-6" />
                 <input
-                  className="ml-1 w-2/3 border-none bg-transparent py-[14px] text-lg text-muted-foreground focus:border-none focus:outline-none"
+                  className="ml-2 w-2/3 border-none bg-transparent py-[14px] text-lg text-muted-foreground focus:border-none focus:outline-none"
                   type="email"
                   name="email"
                   placeholder="Enter your email"

@@ -67,7 +67,7 @@ const AgentPage = () => {
     },
     {
       id: 3,
-      title: "sustainable cold storage",
+      title: "Reliable cold solutions",
       description: "Keep products fresh and safe with solar powered cooling.",
       icon: (
         <svg
@@ -93,7 +93,7 @@ const AgentPage = () => {
     },
     {
       id: 4,
-      title: "Fast & relaible delivery",
+      title: "Market insights",
       description:
         "Reduce your carbon footprint with our sustainable delivery options.",
       icon: (
@@ -175,7 +175,7 @@ const AgentPage = () => {
               <div className="mt-2 flex items-center justify-center rounded-full p-2 group-hover:bg-white">
                 {why.icon}
               </div>
-              <h4 className="text-sm font-medium capitalize group-hover:text-white lg:text-base">
+              <h4 className="text-sm font-medium capitalize group-hover:text-white ">
                 {why.title}
               </h4>
               <p className="text-sm text-gray-600 group-hover:text-white">

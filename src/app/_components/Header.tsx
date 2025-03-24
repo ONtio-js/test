@@ -12,11 +12,11 @@ const Header = () => {
   
   const router = useRouter();
   return (
-    <nav className="flex w-full items-center justify-between px-5 md:pb-32 pt-8 lg:px-20">
-      <div className="flex items-center gap-x-5 lg:gap-x-16">
+    <nav className="flex w-full items-center justify-between px-5 md:pb-24 pt-8 xl:px-20">
+      <div className="flex items-center gap-x-5 lg:gap-x-13">
         <Logo width={100} height={100}  />
 
-        <ul className="hidden items-center gap-x-5 text-sm  font-medium text-muted-foreground md:flex lg:text-base xl:text-lg">
+        <ul className="hidden items-center gap-x-5 text-sm  font-medium text-muted-foreground lg:flex lg:text-base xl:text-lg">
           <li>
             <Link href={"/"}>Home</Link>
           </li>
@@ -31,7 +31,7 @@ const Header = () => {
           </li>
         </ul>
       </div>
-      <div className="hidden items-center gap-6 md:flex">
+      <div className="hidden items-center gap-6 lg:flex">
         <Button
           variant="secondary"
           secondary
@@ -46,7 +46,7 @@ const Header = () => {
         />
       </div>
       <div
-        className={`${menu ? "bg-primaryColor/60" : "bg-transparent"} md:hidden rounded-lg p-2 transition-all duration-100 ease-in hover:cursor-pointer`}
+        className={`${menu ? "bg-primaryColor/60 p-2" : "bg-transparent"} lg:hidden rounded-lg  transition-all duration-500 ease-in hover:cursor-pointer`}
         onClick={() => setMenu((prev) => !prev)}
       >
         <RiMenu3Fill size={28} className="text-primaryColor" />
