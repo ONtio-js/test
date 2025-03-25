@@ -20,12 +20,18 @@ const AgentForm = () => {
     setErrorMessage("");
     setIsLoading(true);
     try {
-      const response = await axios.post(
-        "https://cors-anywhere.herokuapp.com/" +
-          "https://script.google.com/macros/s/AKfycbyHFg7rPZ6sERss2Uvcpm_9zfyxfllTsJdg6HfX8y952th-aW595qBRdZYNYzoV2KF2eA/exec",
-        formData,
-      );
-      if (response.data?.status === "success") {
+           const response = await fetch(
+             "https://script.google.com/macros/s/AKfycbyHFg7rPZ6sERss2Uvcpm_9zfyxfllTsJdg6HfX8y952th-aW595qBRdZYNYzoV2KF2eA/exec",
+             {
+               method: "POST",
+               headers: {
+                 "Content-Type": "application/json",
+                 "Access-Control-Allow-Origin": "*",
+               },
+               body: JSON.stringify(formData),
+             },
+           );
+      if (response.ok) {
         setSMessage(
           "You're on the list! We'll keep you updated with exclusive perks and launch details soon. 🚀",
         );
@@ -43,11 +49,13 @@ const AgentForm = () => {
     setFormData({ ...formData, [event.target.name]: event.target.value });
     console.log(formData);
   };
+
   return (
     <form
       action=""
       className="flex flex-col gap-2 md:w-[600px]"
       onSubmit={handleSubmit}
+      id="form"
     >
       {errorMessage && (
         <div className="rounded-md border border-red-600 bg-red-200 py-3 text-center text-xs text-red-600 sm:text-base">
