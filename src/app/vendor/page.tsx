@@ -2,6 +2,7 @@ import React from "react";
 import Button from "../_components/Button";
 import Image from "next/image";
 import InputField from "../_components/InputField";
+import VendorForm from "../_components/VendorForm";
 const AgentPage = () => {
   const whyChooseGrevego = [
     {
@@ -232,55 +233,7 @@ const AgentPage = () => {
               your information
             </h4>
           </div>
-          <form action="" className="flex w-[600px] flex-col gap-2 pb-20">
-            <InputField
-              label="Business Name"
-              placeholder="Type Your Business name"
-              type="text"
-              onchange={""}
-            />
-            <InputField
-              label=" Name"
-              placeholder="Type Your  name"
-              type="text"
-              onchange={""}
-            />
-            <InputField
-              label="Email Address"
-              placeholder="Type Your email address"
-              type="email"
-              onchange={""}
-            />
-            <InputField
-              label="Phone Number"
-              placeholder="Type Your Phone number"
-              type="text"
-              onchange={""}
-            />
-            <InputField
-              label="Business Type"
-              placeholder="Type your business category e.g (Fruits,  vegetables, organic, Beverages)"
-              type="text"
-              onchange={""}
-            />
-            <InputField
-              label="Business Location"
-              placeholder="Type Your Location eg. Lagos, Nigeria"
-              type="text"
-              onchange={""}
-            />
-            <div className="my-3 flex items-center gap-2">
-              <input type="checkbox" className="size-4 accent-primaryColor" />
-              <p className="text-muted-foreground">
-                Get the latest Grevego and exclusive offers.
-              </p>
-            </div>
-            <Button
-              variant="primary"
-              title="submit"
-              style="w-[30%] mx-auto mt-2"
-            />
-          </form>
+         <VendorForm />
         
         </div>
       </section>

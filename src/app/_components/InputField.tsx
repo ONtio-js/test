@@ -1,9 +1,11 @@
 import React from 'react'
 
-const InputField = ({label,type,placeholder}:{
+const InputField = ({label,type,name,onchange,placeholder}:{
     label:string;
     type:string;
+    name: string;
     placeholder:string;
+    onchange:(event: React.ChangeEvent<HTMLInputElement>) => void
 }) => {
   return (
     <div className='w-full my-1'>
@@ -14,8 +16,9 @@ const InputField = ({label,type,placeholder}:{
         <input
           type={type}
           placeholder={placeholder}
-       
-          className="border-none bg-transparent outline-none focus:border-none focus:outline-none"
+          onChange={onchange}
+          name={name}
+          className="border-none bg-transparent outline-none w-full focus:border-none focus:outline-none"
         />
       </div>
     </div>

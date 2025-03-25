@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import Logo from './Logo';
 import Link from 'next/link';
 import Button from './Button';
-import { useRouter } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { RiMenu3Fill } from "react-icons/ri";
 import {  RxCaretRight } from 'react-icons/rx';
 const Header = () => {
@@ -11,22 +11,33 @@ const Header = () => {
   const [menu,setMenu] = useState(false);
   
   const router = useRouter();
+  const pathname = usePathname();
   return (
-    <nav className="flex w-full items-center justify-between px-5 md:pb-24 pt-8 xl:px-20">
-      <div className="flex items-center gap-x-5 lg:gap-x-13">
-        <Logo width={100} height={100}  />
+    <nav className="flex w-full items-center justify-between px-5 pt-8 md:pb-24 xl:px-20">
+      <div className="lg:gap-x-13 flex items-center gap-x-5">
+        <Logo width={100} height={100} />
 
-        <ul className="hidden items-center gap-x-5 text-sm  font-medium text-muted-foreground lg:flex lg:text-base xl:text-lg">
-          <li>
+        <ul
+          className={`ml-5 hidden items-center gap-x-5 text-sm text-muted-foreground lg:flex lg:text-base xl:text-lg`}
+        >
+          <li
+            className={`${pathname === "/" ? "font-medium text-primaryColor" : ""}`}
+          >
             <Link href={"/"}>Home</Link>
           </li>
-          <li>
+          <li
+            className={`${pathname === "/about" ? "font-medium text-primaryColor" : ""}`}
+          >
             <Link href={"/about"}>About Us</Link>
           </li>
-          <li>
+          <li
+            className={`${pathname === "/services" ? "font-medium text-primaryColor" : ""}`}
+          >
             <Link href={"/services"}>Services</Link>
           </li>
-          <li>
+          <li
+            className={`${pathname === "/contact" ? "font-medium text-primaryColor" : ""}`}
+          >
             <Link href={"/contact"}>Contact Us</Link>
           </li>
         </ul>
@@ -46,7 +57,7 @@ const Header = () => {
         />
       </div>
       <div
-        className={`${menu ? "bg-primaryColor/60 p-2" : "bg-transparent"} lg:hidden rounded-lg  transition-all duration-500 ease-in hover:cursor-pointer`}
+        className={`${menu ? "bg-primaryColor/60 p-2" : "bg-transparent"} rounded-lg transition-all duration-500 ease-in hover:cursor-pointer lg:hidden`}
         onClick={() => setMenu((prev) => !prev)}
       >
         <RiMenu3Fill size={28} className="text-primaryColor" />
@@ -84,6 +95,7 @@ const PartnerLink = ({onclick,open}:{onclick: () => void,open:boolean}) => {
 }
 const MobileNav = ({ menu,onclick }: { onclick: () => void; menu: boolean }) => {
   const [drop, setDrop] = useState(false);
+  const router = useRouter();
   return (
     <div
       className={`fixed left-0 top-0 z-50 h-screen w-screen bg-black/20 transition-all duration-300 ease-in-out overflow-scroll ${menu ? "flex justify-center" : "translate-x-[110%]"}`}
@@ -146,7 +158,7 @@ const MobileNav = ({ menu,onclick }: { onclick: () => void; menu: boolean }) => 
             type="link"
             url="/vendor"
             style="w-[85%] py-4 font-medium text-black"
-            onclick={onclick}
+            onclick={() => {onclick();router.push('/waitlist')}}
           />
         </li>
       </ul>

@@ -2,6 +2,7 @@ import React from "react";
 import Button from "../_components/Button";
 import Image from "next/image";
 import InputField from "../_components/InputField";
+import AgentForm from "../_components/AgentForm";
 
 
 const VendorPage = () => {
@@ -224,55 +225,7 @@ const VendorPage = () => {
               your information
             </h4>
           </div>
-          <form action="" className="flex flex-col gap-2 md:w-[600px]">
-            <InputField
-              label="Business Name"
-              placeholder="Type Your Business name"
-              type="text"
-              
-            />
-            <InputField
-              label=" Name"
-              placeholder="Type Your  name"
-              type="text"
-              
-            />
-            <InputField
-              label="Email Address"
-              placeholder="Type Your email address"
-              type="email"
-         
-            />
-            <InputField
-              label="Phone Number"
-              placeholder="Type Your Phone number"
-              type="text"
-            
-            />
-            <InputField
-              label="Business Type"
-              placeholder="Type your business category e.g (Fruits,  vegetables, organic, Beverages)"
-              type="text"
-          
-            />
-            <InputField
-              label="Business Location"
-              placeholder="Type Your Location eg. Lagos, Nigeria"
-              type="text"
-              
-            />
-            <div className="my-3 flex items-center gap-2">
-              <input type="checkbox" className="size-4 accent-primaryColor" />
-              <p className="text-muted-foreground">
-                Get the latest Grevego and exclusive offers.
-              </p>
-            </div>
-            <Button
-              variant="primary"
-              title="submit"
-              style="w-[30%] mx-auto mt-2"
-            />
-          </form>
+         <AgentForm />
         </div>
       </section>
     </>
