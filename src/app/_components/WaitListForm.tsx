@@ -19,6 +19,27 @@ const WaitListForm = () => {
    event.preventDefault();
    setErrorMessage("");
    setSMessage("");
+   const requiredFields = ['name', 'email', 'phone', 'location'];
+    const emptyFields = requiredFields.filter(field => !formData[field as keyof typeof formData].trim());
+    
+    if (emptyFields.length > 0) {
+      setErrorMessage(`Please fill in all required fields: ${emptyFields.join(', ')}`);
+      return;
+    }
+
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      setErrorMessage('Please enter a valid email address');
+      return;
+    }
+
+    // Validate phone number (basic validation)
+    const phoneRegex = /^\+?[\d\s-]{10,}$/;
+    if (!phoneRegex.test(formData.phone)) {
+      setErrorMessage('Please enter a valid phone number');
+      return;
+    }
    setIsLoading(true);
    try {
      const formDataToSend = new URLSearchParams();
@@ -36,21 +57,19 @@ const WaitListForm = () => {
          body: formDataToSend.toString(),
        },
      );
-     if (!response.ok) {
+    
        setSMessage(
          "You're on the list! We'll keep you updated with exclusive perks and launch details soon. 🚀",
        );
-       setFormData({
-         name: "",
-         location: "",
-         phone: "",
-         email: "",
-       });
-     } else {
-       setErrorMessage("Failed to submit");
-       console.log(response);
-       console.log(formData);
-     }
+     setFormData({
+       name: "",
+       email: "",
+       phone: "",
+       location: "",
+     });
+     const form = event.target as HTMLFormElement;
+     form.reset();
+    
    } catch (error) {
      setErrorMessage("Error submitting your details");
      console.log(error);
