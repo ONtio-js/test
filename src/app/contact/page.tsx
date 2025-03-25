@@ -4,6 +4,7 @@ import InputField from '../_components/InputField';
 import Button from '../_components/Button';
 import { IoLocationSharp } from "react-icons/io5";
 import Image from 'next/image';
+import ContactForm from '../_components/ContactForm';
 
 const page = () => {
   return (
@@ -20,41 +21,7 @@ const page = () => {
         </div>
         <div className="-mx-5 my-20 mb-40 grid gap-y-10 md:mx-0 lg:grid-cols-2">
           <div>
-            <form
-              action=""
-              className="flex flex-col items-center gap-y-5 border-gray-300 px-10 md:pr-10 lg:items-start lg:border-r lg:pr-20"
-            >
-              <h3 className="text-2xl font-semibold">Submit a Request</h3>
-              <InputField
-                label="Name"
-                type="text"
-                placeholder="Type your Name"
-              />
-              <InputField
-                label="Email Address"
-                type="email"
-                placeholder="Type your email address"
-              />
-              <InputField
-                label="Subject"
-                type="text"
-                placeholder="Type your message subject"
-              />
-              <textarea
-                name=""
-                id=""
-                rows={4}
-                className="mt-2 w-full rounded-xl border-2 p-5"
-                placeholder="Type your message here ... "
-              ></textarea>
-              <div>
-                <Button
-                  title="submit"
-                  variant="primary"
-                  style="w-[250px] py-4 mt-8"
-                />
-              </div>
-            </form>
+            <ContactForm />
            
           </div>
           <div className="flex flex-col gap-10 p-5 md:items-center md:p-10 lg:items-start lg:gap-8 lg:p-20">
