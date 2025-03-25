@@ -15,34 +15,49 @@ const WaitListForm = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [errorMessage, setErrorMessage] = useState<string>("");
   const [sMessage, setSMessage] = useState<string>("");
-  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    setErrorMessage('');
-    setIsLoading(true);
-    try {
-         const response = await fetch(
-           "https://script.google.com/macros/s/AKfycbyHFg7rPZ6sERss2Uvcpm_9zfyxfllTsJdg6HfX8y952th-aW595qBRdZYNYzoV2KF2eA/exec",
-           {
-             method: "POST",
-             headers: {
-               "Content-Type": "application/json",
-               "Access-Control-Allow-Origin": "*",
-             },
-             body: JSON.stringify(formData),
-           },
-         );
-      if (response.ok) {
-        setSMessage("submission successful");
-      } else {
-        setErrorMessage("Failed to submit");
-      }
-    } catch (error) {
-      setErrorMessage("Error submitting your details");
-      console.log(error);
-    } finally {
-      setIsLoading(false);
-    }
-  };
+ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+   event.preventDefault();
+   setErrorMessage("");
+   setSMessage("");
+   setIsLoading(true);
+   try {
+     const formDataToSend = new URLSearchParams();
+     Object.entries(formData).forEach(([key, value]) => {
+       formDataToSend.append(key, value);
+     });
+     const response = await fetch(
+       "https://script.google.com/macros/s/AKfycbxh7jzC0T0eMeKnly4lTHZIK6YoRm0pWYlXoGhA0GqHRQ1nDPcwyxeYUaSk4mO1XMUSPA/exec",
+       {
+         method: "POST",
+         mode: "no-cors",
+         headers: {
+           "Content-Type": "application/x-www-form-urlencoded",
+         },
+         body: formDataToSend.toString(),
+       },
+     );
+     if (!response.ok) {
+       setSMessage(
+         "You're on the list! We'll keep you updated with exclusive perks and launch details soon. 🚀",
+       );
+       setFormData({
+         name: "",
+         location: "",
+         phone: "",
+         email: "",
+       });
+     } else {
+       setErrorMessage("Failed to submit");
+       console.log(response);
+       console.log(formData);
+     }
+   } catch (error) {
+     setErrorMessage("Error submitting your details");
+     console.log(error);
+   } finally {
+     setIsLoading(false);
+   }
+ };
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
       setFormData({...formData,[event.target.name]:event.target.value});
       console.log(formData)

@@ -16,35 +16,48 @@ const AgentForm = () => {
   const [errorMessage, setErrorMessage] = useState<string>("");
   const [sMessage, setSMessage] = useState<string>("");
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    setErrorMessage("");
-    setIsLoading(true);
-    try {
-           const response = await fetch(
-             "https://script.google.com/macros/s/AKfycbyHFg7rPZ6sERss2Uvcpm_9zfyxfllTsJdg6HfX8y952th-aW595qBRdZYNYzoV2KF2eA/exec",
-             {
-               method: "POST",
-               headers: {
-                 "Content-Type": "application/json",
-                 "Access-Control-Allow-Origin": "*",
-               },
-               body: JSON.stringify(formData),
-             },
-           );
-      if (response.ok) {
-        setSMessage(
-          "You're on the list! We'll keep you updated with exclusive perks and launch details soon. 🚀",
-        );
-      } else {
-        setErrorMessage("Failed to submit");
-      }
-    } catch (error) {
-      setErrorMessage("Error submitting your details");
-      console.log(error);
-    } finally {
-      setIsLoading(false);
-    }
-  };
+   event.preventDefault();
+   setErrorMessage("");
+   setSMessage("");
+   setIsLoading(true);
+   try {
+     const formDataToSend = new URLSearchParams();
+     Object.entries(formData).forEach(([key, value]) => {
+       formDataToSend.append(key, value);
+     });
+     const response = await fetch(
+       "https://script.google.com/macros/s/AKfycbx3q3ZmVqdszhrkPS6AUYPOy7fYVRSUkTyGZyPdd7oytsWbveG2rvE1ex0ltR4FX__icw/exec",
+       {
+         method: "POST",
+         mode: "no-cors",
+         headers: {
+           "Content-Type": "application/x-www-form-urlencoded",
+         },
+         body: formDataToSend.toString(),
+       },
+     );
+     if (!response.ok) {
+       setSMessage(
+         "You're on the list! We'll keep you updated with exclusive perks and launch details soon. 🚀",
+       );
+       setFormData({
+         name: "",
+         location: "",
+         phone: "",
+         email: "",
+       });
+     } else {
+       setErrorMessage("Failed to submit");
+       console.log(response);
+       console.log(formData);
+     }
+   } catch (error) {
+     setErrorMessage("Error submitting your details");
+     console.log(error);
+   } finally {
+     setIsLoading(false);
+   }
+ };
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({ ...formData, [event.target.name]: event.target.value });
     console.log(formData);
@@ -53,7 +66,7 @@ const AgentForm = () => {
   return (
     <form
       action=""
-      className="flex flex-col gap-2 md:w-[600px]"
+      className="flex flex-col gap-2 w-full px-5 md:w-[600px]"
       onSubmit={handleSubmit}
       id="form"
     >
@@ -97,7 +110,7 @@ const AgentForm = () => {
         label="Address"
         placeholder="Type Your Address eg. Lagos, Nigeria"
         type="text"
-        name="address"
+        name="location"
         onchange={handleChange}
       />
       <div className="my-3 flex items-center gap-2">
@@ -106,7 +119,7 @@ const AgentForm = () => {
           Get the latest Grevego and exclusive offers.
         </p>
       </div>
-      <Button variant="primary" title="submit" style="w-[30%] mx-auto  mt-2" />
+      <Button variant="primary" title="submit" style="w-[60%] mx-auto  mt-2" />
     </form>
   );
 };

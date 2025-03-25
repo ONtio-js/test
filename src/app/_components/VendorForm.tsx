@@ -1,59 +1,67 @@
-'use client';
-import React, { useState } from 'react'
-import InputField from './InputField';
-import Button from './Button';
-import axios from 'axios'
-import Spinner from './Spinner';
+"use client";
+import React, { useState } from "react";
+import InputField from "./InputField";
+import Button from "./Button";
+import axios from "axios";
+import Spinner from "./Spinner";
 const VendorForm = () => {
-  const [formData,setFormData] = useState({
-    businessName:'',
-    name:'',
-    email:'',
-    phone:'',
-    businessType:'',
-    location:''
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    location: "",
   });
-  const [isLoading,setIsLoading] = useState<boolean>(false);
-  const [errorMessage,setErrorMessage] = useState<string>('');
-  const [sMessage,setSMessage] = useState<string>('');
-  const handleChange = (e:React.ChangeEvent<HTMLInputElement>) => {
-      setFormData({...formData,[e.target.name]:e.target.value})
-      setErrorMessage('')
-      console.log('hello')
-  }
-  const handleSubmit = async (event:React.FormEvent<HTMLFormElement>) => {
-        event.preventDefault();
-        setErrorMessage('')
-        setIsLoading(true);
-        try {
-          // const response = await axios.post(
-          //   "https://cors-anywhere.herokuapp.com/" +
-          //     "https://script.google.com/macros/s/AKfycbyHFg7rPZ6sERss2Uvcpm_9zfyxfllTsJdg6HfX8y952th-aW595qBRdZYNYzoV2KF2eA/exec",
-          //   formData,
-          // );
-          const response = await fetch(
-            "https://script.google.com/macros/s/AKfycbyHFg7rPZ6sERss2Uvcpm_9zfyxfllTsJdg6HfX8y952th-aW595qBRdZYNYzoV2KF2eA/exec",
-            {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-                "Access-Control-Allow-Origin": "*"
-              },
-              body: JSON.stringify(formData),
-            },
-          );
-          if(response.ok){
-            setSMessage('submission successful')
-          }else{
-            setErrorMessage('Failed to submit')
-          }
-        } catch (error) {
-          setErrorMessage('Error submitting your details')
-          console.log(error)
-        } finally{
-          setIsLoading(false)
-        }
-  }
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [errorMessage, setErrorMessage] = useState<string>("");
+  const [sMessage, setSMessage] = useState<string>("");
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+    setErrorMessage("");
+    console.log("hello");
+  };
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setErrorMessage("");
+    setSMessage('')
+    setIsLoading(true);
+    try {
+      const formDataToSend = new URLSearchParams();
+      Object.entries(formData).forEach(([key, value]) => {
+        formDataToSend.append(key, value);
+      });
+      const response = await fetch(
+        "https://script.google.com/macros/s/AKfycbzI9oaFheSTCCk_vDz-7JsFP8de8MqvZTmh3f8MU3BA_x1Bsvt8nv4RY4OFSeqptCf9Rg/exec",
+        {
+          method: "POST",
+          mode: "no-cors",
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+          },
+          body: formDataToSend.toString(),
+        },
+      );
+      if (!response.ok) {
+        setSMessage(
+          "You're on the list! We'll keep you updated with exclusive perks and launch details soon. 🚀",
+        );
+        setFormData({
+          name:'',
+          location:'',
+          phone:'',
+          email:''
+        })
+      } else {
+        setErrorMessage("Failed to submit");
+        console.log(response);
+        console.log(formData);
+      }
+    } catch (error) {
+      setErrorMessage("Error submitting your details");
+      console.log(error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
   return (
     <form
       onSubmit={handleSubmit}
@@ -73,13 +81,7 @@ const VendorForm = () => {
         </div>
       )}
       {isLoading && <Spinner />}
-      <InputField
-        label="Business Name"
-        placeholder="Type Your Business name"
-        type="text"
-        name="businessName"
-        onchange={handleChange}
-      />
+    
       <InputField
         label=" Name"
         placeholder="Type Your  name"
@@ -101,15 +103,9 @@ const VendorForm = () => {
         name="phone"
         onchange={handleChange}
       />
+ 
       <InputField
-        label="Business Type"
-        placeholder="Type your business category e.g (Fruits,  vegetables, organic, Beverages)"
-        type="text"
-        name="businessType"
-        onchange={handleChange}
-      />
-      <InputField
-        label="Business Location"
+        label="Office Address"
         placeholder="Type Your Location eg. Lagos, Nigeria"
         type="text"
         name="location"
@@ -129,6 +125,5 @@ const VendorForm = () => {
       />
     </form>
   );
-}
-
-export default VendorForm
+};
+export default VendorForm;
