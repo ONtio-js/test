@@ -1,7 +1,6 @@
 import React from "react";
 import Button from "../_components/Button";
 import Image from "next/image";
-import InputField from "../_components/InputField";
 import VendorForm from "../_components/VendorForm";
 const AgentPage = () => {
   const whyChooseGrevego = [

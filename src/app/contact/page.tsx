@@ -1,8 +1,5 @@
 "use client"
 import React from 'react'
-import InputField from '../_components/InputField';
-import Button from '../_components/Button';
-import { IoLocationSharp } from "react-icons/io5";
 import Image from 'next/image';
 import ContactForm from '../_components/ContactForm';
 

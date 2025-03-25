@@ -12,9 +12,9 @@ const WaitListForm = () => {
     phone:'',
     location:''
   });
-  const [isLoading, setIsLoading] = useState(false);
-  const [errorMessage, setErrorMessage] = useState("");
-  const [sMessage, setSMessage] = useState("");
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [errorMessage, setErrorMessage] = useState<string>("");
+  const [sMessage, setSMessage] = useState<string>("");
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setErrorMessage('');
@@ -25,7 +25,7 @@ const WaitListForm = () => {
           "https://script.google.com/macros/s/AKfycbyHFg7rPZ6sERss2Uvcpm_9zfyxfllTsJdg6HfX8y952th-aW595qBRdZYNYzoV2KF2eA/exec",
         formData,
       );
-      if (response.data.status === "success") {
+      if (response.data?.status === "success") {
         setSMessage("submission successful");
       } else {
         setErrorMessage("Failed to submit");
@@ -50,6 +50,14 @@ const WaitListForm = () => {
       {errorMessage && (
         <div className="rounded-md border border-red-600 bg-red-200 py-3 text-center text-xs text-red-600 sm:text-base">
           {errorMessage}
+        </div>
+      )}
+      {sMessage && (
+        <div className="text- rounded-md bg-[#CEDDD0] px-16 py-3 text-center text-sm">
+          <h3 className="pb-2 text-xl font-semibold">
+            Thank You for Joining grevego
+          </h3>
+          {sMessage}
         </div>
       )}
       <InputField
@@ -86,7 +94,7 @@ const WaitListForm = () => {
           Get the latest Grevego and exclusive offers.
         </p>
       </div>
-      <div className='flex justify-center md:justify-start'>
+      <div className="flex justify-center md:justify-start">
         <Button
           title="Submit"
           variant="primary"

@@ -22,7 +22,7 @@ const ContactForm = () => {
         try {
             
         } catch (error) {
-            
+            console.log(error)
         }finally{
             setIsloading(false)
         }

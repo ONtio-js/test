@@ -13,9 +13,9 @@ const VendorForm = () => {
     businessType:'',
     location:''
   });
-  const [isLoading,setIsLoading] = useState(false);
-  const [errorMessage,setErrorMessage] = useState('');
-  const [sMessage,setSMessage] = useState('');
+  const [isLoading,setIsLoading] = useState<boolean>(false);
+  const [errorMessage,setErrorMessage] = useState<string>('');
+  const [sMessage,setSMessage] = useState<string>('');
   const handleChange = (e:React.ChangeEvent<HTMLInputElement>) => {
       setFormData({...formData,[e.target.name]:e.target.value})
       setErrorMessage('')
@@ -30,7 +30,7 @@ const VendorForm = () => {
               "https://script.google.com/macros/s/AKfycbyHFg7rPZ6sERss2Uvcpm_9zfyxfllTsJdg6HfX8y952th-aW595qBRdZYNYzoV2KF2eA/exec",
             formData,
           );
-          if(response.data.status === "success"){
+          if(response.data?.status === "success"){
             setSMessage('submission successful')
           }else{
             setErrorMessage('Failed to submit')
@@ -45,11 +45,19 @@ const VendorForm = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex flex-col w-full gap-2 pb-20 md:w-[600px]"
+      className="flex w-full flex-col gap-2 pb-20 md:w-[600px]"
     >
       {errorMessage && (
         <div className="rounded-md border border-red-600 bg-red-200 py-3 text-center text-xs text-red-600 sm:text-base">
           {errorMessage}
+        </div>
+      )}
+      {sMessage && (
+        <div className="text- rounded-md bg-[#CEDDD0] px-16 py-3 text-center text-sm">
+          <h3 className="pb-2 text-xl font-semibold">
+            Thank You for Joining grevego
+          </h3>
+          {sMessage}
         </div>
       )}
       {isLoading && <Spinner />}
