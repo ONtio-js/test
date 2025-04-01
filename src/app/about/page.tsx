@@ -35,8 +35,6 @@ export const metadata: Metadata = {
    },
  ];
 const AboutPage = () => {
-
- 
   return (
     <>
       <section className="mt-20 px-8 md:pt-10 pt-5">
@@ -196,12 +194,6 @@ const AboutPage = () => {
             className="mt-10 w-full rounded-3xl"
           />
         </div>
-        {/* <h2 className="mb-10 pt-20 text-center text-2xl font-bold text-gray-700">
-          Our Leadership
-        </h2>
-        <div className="no-scrollbar overflow-x-scroll pb-10">
-          <TeamCarousel />
-        </div> */}
       </section>
     </>
   );
