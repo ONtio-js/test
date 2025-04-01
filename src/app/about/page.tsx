@@ -1,42 +1,40 @@
-import React from 'react'
-import Image from 'next/image';
-import Carousel from '../_components/Carousel';
-import ButtonComponent from './ButtonComponent';
-import { Metadata } from 'next';
+import React from "react";
+import Image from "next/image";
+import Carousel from "../_components/Carousel";
+import ButtonComponent from "./ButtonComponent";
+import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About | Grevego",
 };
 
- export const ourDefinition: {
-   id: number;
-   title: string;
-   description: string;
- }[] = [
-   {
-     id: 1,
-     title: "Sustainability",
-     description: "We champion green practices to protect our planet.",
-   },
-   {
-     id: 2,
-     title: "Innovation",
-     description: "AI and IoT power our smart, future-forward solutions.",
-   },
-   {
-     id: 3,
-     title: "Integrity",
-     description: "We build trust through honesty and responsible business.",
-   },
-   {
-     id: 3,
-     title: "Collaboration",
-     description: "Working with vendors, farmers, and communities to grow together.",
-   },
- ];
 const AboutPage = () => {
+  const ourDefinition = [
+    {
+      id: 1,
+      title: "Sustainability",
+      description: "We champion green practices to protect our planet.",
+    },
+    {
+      id: 2,
+      title: "Innovation",
+      description: "AI and IoT power our smart, future-forward solutions.",
+    },
+    {
+      id: 3,
+      title: "Integrity",
+      description: "We build trust through honesty and responsible business.",
+    },
+    {
+      id: 3,
+      title: "Collaboration",
+      description:
+        "Working with vendors, farmers, and communities to grow together.",
+    },
+  ];
+
   return (
     <>
-      <section className="mt-20 px-8 md:pt-10 pt-5">
+      <section className="mt-20 px-8 pt-5 md:pt-10">
         <h1 className="mx-auto mt-10 pb-5 text-center text-3xl font-semibold leading-snug md:px-28 md:text-5xl lg:max-w-[650px] lg:px-0">
           Revolutionizing Sustainable Living, one Fresh Product at a Time
         </h1>
@@ -72,7 +70,7 @@ const AboutPage = () => {
           <Carousel />
         </div>
       </section>
-      <section className="px-5 py-20 md:px-10  ">
+      <section className="px-5 py-20 md:px-10">
         <div className="flex flex-col items-center gap-7 text-gray-700">
           <h2 className="text-center text-2xl font-semibold md:text-3xl">
             Driving Change, One Sustainable Choice at a Time
@@ -196,6 +194,6 @@ const AboutPage = () => {
       </section>
     </>
   );
-}
+};
 
-export default AboutPage
+export default AboutPage;

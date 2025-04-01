@@ -1,12 +1,34 @@
 import React from "react";
 import Button from "../_components/Button";
 import Image from "next/image";
-import { ourDefinition } from "../about/page";
 import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Services | Grevego",
 };
 const page = () => {
+  const ourDefinition = [
+    {
+      id: 1,
+      title: "Sustainability",
+      description: "We champion green practices to protect our planet.",
+    },
+    {
+      id: 2,
+      title: "Innovation",
+      description: "AI and IoT power our smart, future-forward solutions.",
+    },
+    {
+      id: 3,
+      title: "Integrity",
+      description: "We build trust through honesty and responsible business.",
+    },
+    {
+      id: 3,
+      title: "Collaboration",
+      description:
+        "Working with vendors, farmers, and communities to grow together.",
+    },
+  ];
   return (
     <>
       <section className="pt-5 md:pt-10 md:px-10 mt-20 lg:px-0">
@@ -150,7 +172,7 @@ const page = () => {
           </p>
         </div>
         <div className="grid gap-4 pt-20 md:grid-cols-2 lg:grid-cols-4 lg:gap-8">
-          {ourDefinition.map((how) => (
+          {ourDefinition.map((how: any) => (
             <div
               key={how.id}
               className="relative h-56 overflow-hidden rounded-2xl bg-primaryColor p-5 text-white"
