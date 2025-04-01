@@ -1,6 +1,5 @@
 import React from 'react'
 import Image from 'next/image';
-
 import Carousel from '../_components/Carousel';
 import ButtonComponent from './ButtonComponent';
 import { Metadata } from 'next';
