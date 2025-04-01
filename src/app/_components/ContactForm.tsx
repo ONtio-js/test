@@ -48,7 +48,12 @@ const ContactForm = () => {
         } else {
           setErrorMessage("Error sending message");
         }
-      });
+      }).catch((error) => {
+        console.error("Error submitting form:", error);
+        setErrorMessage(
+          error instanceof Error ? error.message : "Error sending message",
+        );
+      } );
     } catch (error) {
         console.error("Error submitting form:", error);
         setErrorMessage(
