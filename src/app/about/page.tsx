@@ -6,6 +6,7 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: "About | Grevego",
 };
+
  export const ourDefinition: {
    id: number;
    title: string;
@@ -29,8 +30,7 @@ export const metadata: Metadata = {
    {
      id: 3,
      title: "Collaboration",
-     description:
-       "Working with vendors, farmers, and communities to grow together.",
+     description: "Working with vendors, farmers, and communities to grow together.",
    },
  ];
 const AboutPage = () => {
