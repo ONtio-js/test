@@ -23,7 +23,7 @@ const page = () => {
       description: "We build trust through honesty and responsible business.",
     },
     {
-      id: 3,
+      id: 4,
       title: "Collaboration",
       description:
         "Working with vendors, farmers, and communities to grow together.",
@@ -172,7 +172,7 @@ const page = () => {
           </p>
         </div>
         <div className="grid gap-4 pt-20 md:grid-cols-2 lg:grid-cols-4 lg:gap-8">
-          {ourDefinition.map((how: any) => (
+          {ourDefinition.map((how: {id:number;title:string;description:string}) => (
             <div
               key={how.id}
               className="relative h-56 overflow-hidden rounded-2xl bg-primaryColor p-5 text-white"
