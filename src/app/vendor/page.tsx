@@ -127,9 +127,9 @@ const AgentPage = () => {
   ];
   return (
     <>
-      <section className="px-5 md:px-10 lg:px-0">
-        <div className="mt-10 flex flex-col items-center gap-6 pb-20 md:-mt-10">
-          <h2 className="max-w-[700px] px-5 text-center text-2xl font-semibold text-gray-700 md:px-0 md:text-6xl md:leading-[5rem]">
+      <section className="mt-20 px-5 md:px-10 md:pt-10  lg:px-0">
+        <div className="mt-12 flex flex-col items-center gap-6 pb-20 ">
+          <h2 className="max-w-[700px] px-5 text-center text-2xl pt-5 font-semibold text-gray-700 md:px-0 md:text-6xl md:leading-[5rem]">
             Grow your <span className="text-[#ffb84d]">Business</span> with
             Grevego
           </h2>

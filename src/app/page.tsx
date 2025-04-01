@@ -54,9 +54,9 @@ export default  function Home() {
   return (
     <>
       {/* begining of hero section */}
-      <section className="w-full pb-10">
-        <div className="lg:px-30 flex flex-col items-center gap-4 px-10">
-          <h1 className="max-w-[500px] py-4 text-center text-3xl font-bold md:text-5xl md:leading-snug">
+      <section className="w-full pt-20 md:pt-10 pb-10">
+        <div className="lg:px-30 flex flex-col items-center md:pt-24 gap-4 px-10">
+          <h1 className="max-w-[500px] pt-10 md:pt-4 pb-4 text-center text-3xl font-bold md:text-5xl md:leading-snug">
             Healthy Food, Sustainable Future
           </h1>
           <p className="text-center text-sm text-gray-700">

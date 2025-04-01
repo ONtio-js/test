@@ -40,7 +40,7 @@ const AboutPage = () => {
  
   return (
     <>
-      <section className="mt-10 px-8 md:-mt-10">
+      <section className="mt-24 px-8 md:pt-10 pt-5">
         <h1 className="mx-auto pb-5 text-center text-3xl font-semibold leading-snug md:px-28 md:text-4xl lg:max-w-[650px] lg:px-0">
           Revolutionizing Sustainable Living, one Fresh Product at a Time
         </h1>

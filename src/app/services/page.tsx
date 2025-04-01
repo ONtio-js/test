@@ -9,8 +9,8 @@ export const metadata: Metadata = {
 const page = () => {
   return (
     <>
-      <section className="md:px-10 lg:px-0">
-        <div className="mt-10 flex flex-col items-center gap-6 pb-20 md:-mt-10">
+      <section className="pt-5 md:pt-10 md:px-10 mt-20 lg:px-0">
+        <div className="md:mt-10 flex flex-col items-center gap-6 pb-20 ">
           <h2 className="text-center text-2xl font-semibold text-gray-700 sm:px-20 md:text-5xl md:leading-[3rem] lg:max-w-[800px]">
             <span className="text-[#ffb84d]">Innovative solutions</span> for a
             Greener Future
@@ -27,7 +27,7 @@ const page = () => {
             type="link"
           />
         </div>
-        <div className="md:-mx-12 no-scrollbar mb-20 flex max-h-96 items-center gap-4  overflow-x-scroll px-20 lg:justify-center lg:gap-8">
+        <div className="no-scrollbar mb-20 flex max-h-96 items-center gap-4 overflow-x-scroll px-20 md:-mx-12 lg:justify-center lg:gap-8">
           <Image
             src={"/home/services/service-hero-1.png"}
             alt="agent"

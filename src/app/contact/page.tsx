@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 const page = () => {
   return (
     <>
-      <section className="mt-10 px-5 text-gray-700 md:-mt-10 md:px-20">
+      <section className="mt-20 px-5 md:pt-10 text-gray-700  md:px-20">
         <div className="flex flex-col items-center py-10">
           <h2 className="max-w-[800px] text-center text-2xl font-bold md:text-5xl">
             We’re Here to Help – Let’s Build a Greener Future Together
