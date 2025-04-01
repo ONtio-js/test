@@ -78,7 +78,7 @@ const AgentForm = () => {
  };
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({ ...formData, [event.target.name]: event.target.value });
-    console.log(formData);
+     setErrorMessage("");
   };
 
   return (
@@ -137,7 +137,7 @@ const AgentForm = () => {
           Get the latest Grevego and exclusive offers.
         </p>
       </div>
-      <Button variant="primary" title="submit" style="w-[60%] mx-auto  mt-2" />
+      <Button variant="primary" title="Submit" style="w-[60%] mx-auto  mt-10" />
     </form>
   );
 };

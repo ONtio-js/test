@@ -2,6 +2,10 @@ import React from "react";
 import Button from "../_components/Button";
 import Image from "next/image";
 import VendorForm from "../_components/VendorForm";
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Vendor | Grevego",
+};
 const AgentPage = () => {
   const whyChooseGrevego = [
     {
@@ -158,7 +162,7 @@ const AgentPage = () => {
           />
         </div>
       </section>
-      <section className="px-10 md:px-20">
+      <section className="px-5 md:px-20">
         <div className="py-10 md:py-20">
           <h2 className="py-5 text-center text-2xl font-semibold text-gray-700 md:text-4xl">
             why choose grevego
@@ -228,7 +232,7 @@ const AgentPage = () => {
             <h2 className="text-4xl font-semibold capitalize text-gray-700">
               start selling today
             </h2>
-            <h4 className="py-5 text-center text-2xl font-medium capitalize text-gray-600">
+            <h4 className="py-5 pb-10 text-center text-2xl font-medium capitalize text-gray-600">
               your information
             </h4>
           </div>

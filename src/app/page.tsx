@@ -54,7 +54,7 @@ export default  function Home() {
   return (
     <>
       {/* begining of hero section */}
-      <section className="w-full py-10">
+      <section className="w-full pb-10">
         <div className="lg:px-30 flex flex-col items-center gap-4 px-10">
           <h1 className="max-w-[500px] py-4 text-center text-3xl font-bold md:text-5xl md:leading-snug">
             Healthy Food, Sustainable Future
@@ -65,7 +65,7 @@ export default  function Home() {
           </p>
           <div className="flex w-full flex-col items-center justify-center gap-7 py-5 md:flex-row">
             <Button
-              title="join waitlist"
+              title="Join waitlist"
               variant="primary"
               type="link"
               onclick={() => router.push("/waitlist")}
@@ -75,7 +75,7 @@ export default  function Home() {
         </div>
         <div className="no-scrollbar flex w-full items-center gap-2 overflow-x-scroll pl-5 pt-10 md:justify-center lg:gap-4">
           <FeatureCard title="Reduce Food Waste" />
-          <FeatureCard title="Support Local Farmers" />
+          <FeatureCard title="Support Vendors" />
           <FeatureCard title="Personalized Nutrition" />
           <FeatureCard title="Clean Energy Solutions" />
         </div>
@@ -106,44 +106,6 @@ export default  function Home() {
               priority
             />
           </div>
-        </div>
-        <div className="hidden items-center justify-evenly gap-4 pt-20 md:flex">
-          <Image
-            src={"/home/logos/creative.svg"}
-            alt="creative"
-            width={100}
-            height={100}
-          />
-          <Image
-            src={"/home/logos/digicert.svg"}
-            alt="forbes"
-            width={100}
-            height={100}
-          />
-          <Image
-            src={"/home/logos/linktree.svg"}
-            alt="techcrunch"
-            width={100}
-            height={100}
-          />
-          <Image
-            src={"/home/logos/qualys.svg"}
-            alt="venturebeat"
-            width={100}
-            height={100}
-          />
-          <Image
-            src={"/home/logos/vk.svg"}
-            alt="venturebeat"
-            width={100}
-            height={100}
-          />
-          <Image
-            src={"/home/logos/xerox.svg"}
-            alt="venturebeat"
-            width={100}
-            height={100}
-          />
         </div>
       </section>
       {/* end of hero section */}
@@ -264,7 +226,7 @@ export default  function Home() {
         </div>
         <div className="flex items-center pt-10 lg:gap-4 overflow-x-scroll no-scrollbar md:justify-center ">
           <FeatureCard colored title="Reduce Food Waste" />
-          <FeatureCard colored title="Support Local Farmers" />
+          <FeatureCard colored title="Support Vendors" />
           <FeatureCard colored title="Personalized Nutrition" />
           <FeatureCard colored title="Clean Energy Solutions" />
         </div>

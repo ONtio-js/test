@@ -17,7 +17,6 @@ const VendorForm = () => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
     setErrorMessage("");
-    console.log("hello");
   };
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -147,8 +146,8 @@ const VendorForm = () => {
       </div>
       <Button
         variant="primary"
-        title="submit"
-        style="w-[60%] mx-auto mt-2"
+        title="Submit"
+        style="w-[60%] mx-auto mt-10"
         btnType="submit"
       />
     </form>

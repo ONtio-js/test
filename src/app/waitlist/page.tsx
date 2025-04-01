@@ -1,7 +1,10 @@
 import Image from 'next/image';
 import React from 'react'
 import WaitListForm from '../_components/WaitListForm';
-
+import { Metadata } from 'next';
+export const metadata: Metadata = {
+  title: "Waitlist | Grevego",
+}
 const page = () => {
   return (
     <div className="mt-10 md:-mt-14 px-5 md:px-20 pb-10">
@@ -21,14 +24,14 @@ const page = () => {
           launch details soon. 
         </p>
       </div>
-      <div className="flex flex-col items-start justify-around gap-10 md:px-20 py-10 lg:flex-row">
+      <div className="flex flex-col items-center justify-around gap-10 md:px-20 py-10 lg:flex-row">
         <WaitListForm />
         <Image
           src="/home/waitlist.jpeg"
           alt="waitlist"
           width={500}
           height={500}
-          className="w-full rounded-[20px]"
+          className=" rounded-[20px]"
         />
       </div>
     </div>

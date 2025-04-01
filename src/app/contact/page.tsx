@@ -1,8 +1,11 @@
-"use client"
+
 import React from 'react'
 import Image from 'next/image';
 import ContactForm from '../_components/ContactForm';
-
+import { Metadata } from 'next';
+export const metadata: Metadata = {
+  title: "Contact | Grevego",
+};
 const page = () => {
   return (
     <>

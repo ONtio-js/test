@@ -1,14 +1,14 @@
-'use client';
-import React from 'react'
-import Logo from './Logo'
-import Image from 'next/image'
-import Link from 'next/link';
+"use client";
+import React from "react";
+import Logo from "./Logo";
+import Image from "next/image";
+import Link from "next/link";
 import { TbMailFilled } from "react-icons/tb";
 import { PiTrademarkLight } from "react-icons/pi";
 
-import FeatureCard from './FeatureCard';
-import Button from './Button';
-import { useRouter } from 'next/navigation';
+import FeatureCard from "./FeatureCard";
+import Button from "./Button";
+import { useRouter } from "next/navigation";
 const Footer = () => {
   const router = useRouter();
   return (
@@ -24,7 +24,7 @@ const Footer = () => {
             we’ve got a place for you!
           </p>
           <Button
-            title="Become a partner"
+            title="Become a Partner"
             variant="secondary"
             type="link"
             style="text-white border-white mt-10"
@@ -32,14 +32,14 @@ const Footer = () => {
             onclick={() => router.push("/agent")}
           />
         </div>
-        <div className="flex items-center md:justify-center gap-2 overflow-x-scroll no-scrollbar pl-5 pt-10 lg:gap-4">
+        <div className="no-scrollbar flex items-center gap-2 overflow-x-scroll pl-5 pt-10 md:justify-center lg:gap-4">
           <FeatureCard title="Reduce Food Waste" />
-          <FeatureCard title="Support Local Farmers" />
+          <FeatureCard title="Support Vendors" />
           <FeatureCard title="Personalized Nutrition" />
           <FeatureCard title="Clean Energy Solutions" />
         </div>
         <div className="relative my-20 overflow-y-hidden">
-          <div className="no-scrollbar flex items-center gap-4 overflow-x-scroll lg:justify-center">
+          <div className="no-scrollbar  flex items-center gap-4 overflow-x-scroll lg:justify-center">
             <Image
               src={"/home/test-3.svg"}
               alt="hero"
@@ -111,19 +111,19 @@ const Footer = () => {
             <p className="py-3">
               <a href="tel:+2349053306268">+2349053306268 </a>
             </p>
-            <p>1 Muta abiru close maryland Ikeja</p>
+            <p>1 Muba Abiru, Lagos Nigeria</p>
           </div>
           <div className="col-span-3 grid gap-5 md:grid-cols-5 md:pl-3 lg:pl-0">
             <ul className="flex flex-col gap-y-3">
               <h3 className="text-lg font-semibold capitalize">discover</h3>
               <li>
-                <Link href={"/about"}>About Us</Link>
+                <Link href={"/about"}>About us</Link>
               </li>
               <li>
                 <Link href={"/blog"}>Blog</Link>
               </li>
               <li>
-                <Link href={"/contact"}>Contact Us</Link>
+                <Link href={"/contact"}>Contact us</Link>
               </li>
             </ul>
             <ul className="flex flex-col gap-y-3">
@@ -138,13 +138,13 @@ const Footer = () => {
             <ul className="flex flex-col gap-3">
               <h3 className="text-lg font-semibold capitalize">Legal</h3>
               <li>
-                <Link href={"/about"}>Privacy Policy</Link>
+                <Link href={"/about"}>Privacy policy</Link>
               </li>
               <li>
                 <Link href={"/blog"}>Terms of use</Link>
               </li>
               <li>
-                <Link href={"/contact"}>conditions</Link>
+                <Link href={"/contact"}>Conditions</Link>
               </li>
             </ul>
             <div className="flex flex-col gap-y-3 md:col-span-2">
@@ -163,8 +163,8 @@ const Footer = () => {
                   name="email"
                   placeholder="Enter your email"
                 />
-                <button className="rounded-full bg-primaryColor px-3 py-[6px] text-white">
-                  subscribe
+                <button className="rounded-full  bg-primaryColor px-3 py-[6px] text-white">
+                  Subscribe
                 </button>
               </div>
             </div>
@@ -227,6 +227,5 @@ const Footer = () => {
       </footer>
     </>
   );
-}
-
-export default Footer
+};
+export default Footer;

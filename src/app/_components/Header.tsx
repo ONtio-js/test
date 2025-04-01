@@ -102,7 +102,7 @@ const MobileNav = ({ menu,onclick }: { onclick: () => void; menu: boolean }) => 
       onClick={onclick}
     >
       <ul
-        className={` ${menu ? "translate-x-0" : "translate-x-[110%]"} absolute top-24 mx-2.5 flex w-[85%] flex-col items-center gap-5 rounded-xl bg-green-50 p-10 text-muted-foreground shadow-lg drop-shadow-lg transition-transform duration-500 `}
+        className={` ${menu ? "translate-x-0" : "translate-x-[110%]"} absolute top-24  flex w-[95%] flex-col items-center gap-5 rounded-xl bg-green-50 p-10 text-muted-foreground shadow-lg drop-shadow-lg transition-transform duration-500 `}
         onClick={(e) => e.stopPropagation()}
       >
         <li className="text-center">
@@ -130,11 +130,11 @@ const MobileNav = ({ menu,onclick }: { onclick: () => void; menu: boolean }) => 
             title="Become a Partner"
             variant="secondary"
             secondary
-            style="pl-5 w-[85%] gap-5 py-2 font-medium text-black"
+            style="pl-5 w-[100%] gap-5 py-2 font-medium text-black"
             onclick={() => setDrop((prev) => !prev)}
           />
           <ul
-            className={`${drop ? "flex opacity-100" : "hidden opacity-0"} mt-4 w-[90%] flex-col gap-3 rounded-2xl bg-white p-5 shadow-2xl drop-shadow-xl transition-opacity duration-700 ease-in`}
+            className={`${drop ? "flex opacity-100" : "hidden opacity-0"} mt-4 w-[100%] flex-col gap-3 rounded-2xl bg-white p-5 shadow-2xl drop-shadow-xl transition-opacity duration-700 ease-in`}
           >
             <li className="flex items-center gap-3 text-[15px]">
               <Link onClick={onclick} href={"/vendor"}>
@@ -157,7 +157,7 @@ const MobileNav = ({ menu,onclick }: { onclick: () => void; menu: boolean }) => 
             secondary={false}
             type="link"
             url="/vendor"
-            style="w-[85%] py-4 font-medium text-black"
+            style="w-[100%] py-4 font-medium text-black"
             onclick={() => {onclick();router.push('/waitlist')}}
           />
         </li>

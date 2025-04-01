@@ -2,7 +2,10 @@ import React from "react";
 import Button from "../_components/Button";
 import Image from "next/image";
 import AgentForm from "../_components/AgentForm";
-
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Agent | Grevego",
+};
 
 const VendorPage = () => {
   const whyChooseGrevego = [
@@ -159,7 +162,7 @@ const VendorPage = () => {
             More sales, easy management, and eco-friendly delivery, sell smarter
           </p>
         </div>
-        <div className="grid gap-4 gap-y-10 px-10 pb-20 md:grid-cols-2 md:gap-y-4 lg:grid-cols-4 lg:gap-10">
+        <div className="grid gap-4 gap-y-10 px-5 pb-20 md:grid-cols-2 md:gap-y-4 lg:grid-cols-4 lg:gap-10">
           {whyChooseGrevego.map((why) => (
             <div
               key={why.id}

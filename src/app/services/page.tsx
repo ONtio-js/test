@@ -2,17 +2,20 @@ import React from "react";
 import Button from "../_components/Button";
 import Image from "next/image";
 import { ourDefinition } from "../about/page";
-
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Services | Grevego",
+};
 const page = () => {
   return (
     <>
-      <section className="md:px-20 lg:px-0">
-        <div className="mt-10  md:-mt-10 flex flex-col items-center gap-6 pb-20">
-          <h2 className="lg:max-w-[800px] text-center text-2xl md:text-5xl font-semibold sm:px-20 md:leading-[3rem] text-gray-700">
+      <section className="md:px-10 lg:px-0">
+        <div className="mt-10 flex flex-col items-center gap-6 pb-20 md:-mt-10">
+          <h2 className="text-center text-2xl font-semibold text-gray-700 sm:px-20 md:text-5xl md:leading-[3rem] lg:max-w-[800px]">
             <span className="text-[#ffb84d]">Innovative solutions</span> for a
             Greener Future
           </h2>
-          <p className="max-w-[800px] text-center text-gray-700 px-5 md:px-0">
+          <p className="max-w-[800px] px-5 text-center text-gray-700 md:px-0">
             At Grevego, we blend cutting-edge technology with sustainability to
             create a future where healthy living is effortless and eco-conscious
             choices are second nature.
@@ -24,38 +27,38 @@ const page = () => {
             type="link"
           />
         </div>
-        <div className="mb-20 flex max-h-96 items-center md:justify-center gap-4 lg:gap-8 px-20 overflow-x-scroll no-scrollbar">
+        <div className="md:-mx-12 no-scrollbar mb-20 flex max-h-96 items-center gap-4  overflow-x-scroll px-20 lg:justify-center lg:gap-8">
           <Image
             src={"/home/services/service-hero-1.png"}
             alt="agent"
-            width={190}
+            width={500}
             height={100}
-            className="h-[15rem] rounded-3xl"
+            className="h-[309px] w-[260px] rounded-3xl"
           />
           <Image
             src={"/home/services/service-hero-2.jpeg"}
             alt="agent"
             width={190}
             height={100}
-            className="h-48 lg:w-[20%] rounded-3xl"
+            className="h-44 rounded-3xl lg:w-[20%]"
           />
           <Image
             src={"/home/services/service-hero-3.jpeg"}
             alt="agent"
-            width={190}
+            width={500}
             height={100}
-            className="h-[15rem] rounded-3xl"
+            className="h-[309px] w-[260px] rounded-3xl"
           />
           <Image
             src={"/home/services/service-hero-4.jpeg"}
             alt="agent"
             width={190}
             height={100}
-            className="h-48 lg:w-[20%] rounded-3xl"
+            className="h-48 rounded-3xl lg:w-[20%]"
           />
         </div>
       </section>
-      <section className=" px-5 md:px-10 py-20 lg:px-20">
+      <section className="px-5 py-20 md:px-10 lg:px-20">
         <div>
           <h2 className="text-center text-3xl font-bold capitalize text-gray-700">
             our services
@@ -65,9 +68,11 @@ const page = () => {
             solutions
           </p>
         </div>
-        <div className="mt-28 flex items-center flex-col md:flex-row justify-between rounded-3xl bg-primaryColor/10 p-5 py-10 lg:p-10 gap-10 lg:gap-40">
+        <div className="mt-28 flex flex-col items-center justify-between gap-10 rounded-3xl bg-primaryColor/10 p-5 py-10 md:flex-row lg:gap-40 lg:p-10">
           <div className="flex max-w-[550px] flex-col gap-3 text-gray-700">
-            <h3 className="text-xl md:text-3xl font-bold">Cold Last-Mile Delivery</h3>
+            <h3 className="text-xl font-bold md:text-3xl">
+              Cold Last-Mile Delivery
+            </h3>
             <h6 className="text-lg md:font-medium">
               Freshness Delivered, Sustainably
             </h6>
@@ -83,13 +88,13 @@ const page = () => {
               alt="delivery"
               width={700}
               height={100}
-              className="rounded-3xl "
+              className="rounded-3xl"
             />
           </div>
         </div>
-        <div className="my-24 flex flex-col md:flex-row-reverse items-center gap-5 rounded-3xl bg-primaryColor/10 px-5 py-10 lg:p-10 transition-all delay-0 ease-linear hover:-translate-x-1 gap-y-10 lg:gap-40">
+        <div className="my-24 flex flex-col items-center gap-5 gap-y-10 rounded-3xl bg-primaryColor/10 px-5 py-10 transition-all delay-0 ease-linear hover:-translate-x-1 md:flex-row-reverse lg:gap-40 lg:p-10">
           <div className="flex max-w-[550px] flex-col gap-3 text-gray-700">
-            <h3 className="text-xl md:text-3xl font-bold">
+            <h3 className="text-xl font-bold md:text-3xl">
               Ai-Powered Personalized Nutrition
             </h3>
             <h6 className="text-lg md:font-medium">
@@ -111,9 +116,9 @@ const page = () => {
             />
           </div>
         </div>
-        <div className="flex items-center flex-col md:flex-row rounded-3xl bg-primaryColor/10 px-5 py-10 lg:p-10 transition-all delay-0 ease-linear hover:translate-x-1 gap-y-10 lg:gap-40">
+        <div className="flex flex-col items-center gap-y-10 rounded-3xl bg-primaryColor/10 px-5 py-10 transition-all delay-0 ease-linear hover:translate-x-1 md:flex-row lg:gap-40 lg:p-10">
           <div className="flex max-w-[550px] flex-col gap-3 text-gray-700">
-            <h3 className="text-xl md:text-3xl font-bold">
+            <h3 className="text-xl font-bold md:text-3xl">
               Organic Recycling & Waste Management
             </h3>
             <h6 className="text-lg font-medium">Turning Waste into Value</h6>
@@ -133,7 +138,7 @@ const page = () => {
           </div>
         </div>
         <div className="mt-32 flex flex-col items-center gap-7 text-gray-700">
-          <h2 className="text-3xl md:max-w-[400px] text-center lg:w-full font-semibold">
+          <h2 className="text-center text-3xl font-semibold md:max-w-[400px] lg:w-full">
             Guiding Principles That Define Grevego
           </h2>
           <p className="max-w-[950px] text-center">
@@ -144,7 +149,7 @@ const page = () => {
             product, partnership, and innovation contributes to a better world
           </p>
         </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 pt-20 lg:gap-8">
+        <div className="grid gap-4 pt-20 md:grid-cols-2 lg:grid-cols-4 lg:gap-8">
           {ourDefinition.map((how) => (
             <div
               key={how.id}

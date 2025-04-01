@@ -4,6 +4,10 @@ import Image from 'next/image';
 import Carousel from '../_components/Carousel';
 import TeamCarousel from '../_components/TeamCarousel';
 import ButtonComponent from './ButtonComponent';
+import { Metadata } from 'next';
+export const metadata: Metadata = {
+  title: "About | Grevego",
+};
  export const ourDefinition: {
    id: number;
    title: string;
@@ -11,7 +15,7 @@ import ButtonComponent from './ButtonComponent';
  }[] = [
    {
      id: 1,
-     title: "sustainability",
+     title: "Sustainability",
      description: "We champion green practices to protect our planet.",
    },
    {
@@ -72,7 +76,7 @@ const AboutPage = () => {
           <Carousel />
         </div>
       </section>
-      <section className="px-5 py-20 md:px-20 lg:px-40">
+      <section className="px-5 py-20 md:px-10  ">
         <div className="flex flex-col items-center gap-7 text-gray-700">
           <h2 className="text-center text-2xl font-semibold md:text-3xl">
             Driving Change, One Sustainable Choice at a Time

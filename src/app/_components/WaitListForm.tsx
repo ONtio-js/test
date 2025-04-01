@@ -79,11 +79,11 @@ const WaitListForm = () => {
  };
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
       setFormData({...formData,[event.target.name]:event.target.value});
-      console.log(formData)
+      setErrorMessage("");
   }
   return (
-    <form className="w-full" onSubmit={handleSubmit}>
-      <h2 className="text-center text-2xl font-semibold text-gray-700">
+    <form className="md:min-w-[500px] w-full" onSubmit={handleSubmit}>
+      <h2 className="text-center pb-6 text-2xl font-semibold text-gray-700">
         Your Information
       </h2>
       {isLoading && <Spinner />}
@@ -134,11 +134,11 @@ const WaitListForm = () => {
           Get the latest Grevego and exclusive offers.
         </p>
       </div>
-      <div className="flex justify-center md:justify-start">
+      <div className="flex justify-center ">
         <Button
           title="Submit"
           variant="primary"
-          style="my-5 w-[60%] "
+          style="my-10 w-[60%] "
           btnType="submit"
         />
       </div>
