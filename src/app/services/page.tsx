@@ -29,7 +29,7 @@ const page = () => {
         </div>
         <div className="no-scrollbar mb-20 flex max-h-96 items-center gap-4 overflow-x-scroll px-20 md:-mx-12 lg:justify-center lg:gap-8">
           <Image
-            src={"/home/services/service-hero-1.png"}
+            src={"/home/vendor.svg"}
             alt="agent"
             width={500}
             height={100}
@@ -73,7 +73,7 @@ const page = () => {
             <h3 className="text-xl font-bold md:text-3xl">
               Cold Last-Mile Delivery
             </h3>
-            <h6 className="text-lg md:font-medium">
+            <h6 className="text-lg font-medium">
               Freshness Delivered, Sustainably
             </h6>
             <p className="">
@@ -97,7 +97,7 @@ const page = () => {
             <h3 className="text-xl font-bold md:text-3xl">
               Ai-Powered Personalized Nutrition
             </h3>
-            <h6 className="text-lg md:font-medium">
+            <h6 className="text-lg font-medium">
               Smart Nutrition, Just for You
             </h6>
             <p>

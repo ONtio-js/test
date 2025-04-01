@@ -2,7 +2,6 @@ import React from 'react'
 import Image from 'next/image';
 
 import Carousel from '../_components/Carousel';
-import TeamCarousel from '../_components/TeamCarousel';
 import ButtonComponent from './ButtonComponent';
 import { Metadata } from 'next';
 export const metadata: Metadata = {
@@ -40,8 +39,8 @@ const AboutPage = () => {
  
   return (
     <>
-      <section className="mt-24 px-8 md:pt-10 pt-5">
-        <h1 className="mx-auto pb-5 text-center text-3xl font-semibold leading-snug md:px-28 md:text-4xl lg:max-w-[650px] lg:px-0">
+      <section className="mt-20 px-8 md:pt-10 pt-5">
+        <h1 className="mx-auto mt-10 pb-5 text-center text-3xl font-semibold leading-snug md:px-28 md:text-5xl lg:max-w-[650px] lg:px-0">
           Revolutionizing Sustainable Living, one Fresh Product at a Time
         </h1>
         <p className="mx-auto text-center text-gray-700 md:px-28 lg:max-w-[700px] lg:px-0">
@@ -197,12 +196,12 @@ const AboutPage = () => {
             className="mt-10 w-full rounded-3xl"
           />
         </div>
-        <h2 className="mb-10 pt-20 text-center text-2xl font-bold text-gray-700">
+        {/* <h2 className="mb-10 pt-20 text-center text-2xl font-bold text-gray-700">
           Our Leadership
         </h2>
         <div className="no-scrollbar overflow-x-scroll pb-10">
           <TeamCarousel />
-        </div>
+        </div> */}
       </section>
     </>
   );

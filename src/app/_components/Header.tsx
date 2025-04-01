@@ -99,7 +99,7 @@ const MobileNav = ({ menu,onclick }: { onclick: () => void; menu: boolean }) => 
   return (
     <div
       className={`fixed left-0 top-0 z-50 h-screen w-screen bg-black/20 transition-all duration-300 ease-in-out overflow-scroll ${menu ? "flex justify-center" : "translate-x-[110%]"}`}
-      onClick={onclick}
+      onClick={() => {onclick();setDrop(false)}}
     >
       <ul
         className={` ${menu ? "translate-x-0" : "translate-x-[110%]"} absolute top-24  flex w-[95%] flex-col items-center gap-5 rounded-xl bg-green-50 p-10 text-muted-foreground shadow-lg drop-shadow-lg transition-transform duration-500 `}
@@ -130,7 +130,7 @@ const MobileNav = ({ menu,onclick }: { onclick: () => void; menu: boolean }) => 
             title="Become a Partner"
             variant="secondary"
             secondary
-            style="pl-5 w-[100%] gap-5 py-2 font-medium text-black"
+            style={`pl-5 w-[100%] gap-5 py-2  hover:bg-none font-medium text-black`}
             onclick={() => setDrop((prev) => !prev)}
           />
           <ul

@@ -61,7 +61,7 @@ const Carousel = () => {
             alt="about"
             width={500}
             height={100}
-            className="my-auto mt-12 h-96 w-[90%] rounded-2xl"
+            className="my-auto mt-12 h-[500px] w-[90%] rounded-2xl"
           />
         </div>
         <div>
@@ -79,7 +79,7 @@ const Carousel = () => {
             alt="about"
             width={500}
             height={500}
-            className="mt-12 h-96 w-[90%] rounded-2xl"
+            className="mt-12 h-[500px] w-[90%] rounded-2xl"
           />
         </div>
         <div>
@@ -97,7 +97,7 @@ const Carousel = () => {
             alt="about"
             width={500}
             height={500}
-            className="mt-12 h-96 w-[90%] rounded-2xl"
+            className="mt-12 h-[500px] w-[90%] rounded-2xl"
           />
         </div>
       </Slider>

@@ -147,7 +147,7 @@ const Footer = () => {
                 <Link href={"/contact"}>Conditions</Link>
               </li>
             </ul>
-            <div className="flex flex-col gap-y-3 md:col-span-2">
+            <div className="flex flex-col gap-y-3 md:col-span-2 mt-10 md:mt-0">
               <h3 className="text-lg font-semibold capitalize">
                 Sustainable Digest
               </h3>
@@ -176,7 +176,7 @@ const Footer = () => {
           <p className="mditems-center hidden gap-1 md:flex">
             powered by
             <span className="flex font-semibold">
-              Webmekanic
+              webMekanic
               <sub>
                 <PiTrademarkLight />
               </sub>

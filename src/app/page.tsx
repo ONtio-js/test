@@ -55,7 +55,7 @@ export default  function Home() {
     <>
       {/* begining of hero section */}
       <section className="w-full pt-20 md:pt-10 pb-10">
-        <div className="lg:px-30 flex flex-col items-center md:pt-24 gap-4 px-10">
+        <div className="lg:px-30 flex flex-col items-center md:pt-24 gap-2 px-10">
           <h1 className="max-w-[500px] pt-10 md:pt-4 pb-4 text-center text-3xl font-bold md:text-5xl md:leading-snug">
             Healthy Food, Sustainable Future
           </h1>
@@ -63,7 +63,7 @@ export default  function Home() {
             Revolutionizing food access through green retailing, smart delivery,
             and AI-powered nutrition guidance.
           </p>
-          <div className="flex w-full flex-col items-center justify-center gap-7 py-5 md:flex-row">
+          <div className="flex w-full flex-col items-center justify-center gap-7 py-14 md:flex-row">
             <Button
               title="Join waitlist"
               variant="primary"

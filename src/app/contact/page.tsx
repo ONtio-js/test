@@ -19,7 +19,7 @@ const page = () => {
             from you
           </p>
         </div>
-        <div className="-mx-5 my-20 mb-40 grid gap-y-10 md:mx-0 lg:grid-cols-2">
+        <div className="-mx-5 my-20 mb-20 grid gap-y-10 md:mx-0 lg:grid-cols-2">
           <div>
             <ContactForm />
            
@@ -47,11 +47,11 @@ const page = () => {
               <h3 className="pb-3 text-2xl font-medium">Call us</h3>
               <p>We are here to help with any question you may have.</p>
               <p className="pt-2 font-semibold text-primaryColor">
-                <a href="tel:+2349053306268">+2349053306268</a> {",  "}
+                <a href="tel:+2349053306268">+2349053306268</a> 
               </p>
             </div>
 
-            <div className="mb-20 flex flex-col md:mb-0 md:items-center lg:items-start">
+            <div className=" flex flex-col md:items-center lg:items-start">
               <h3 className="pb-3 text-2xl font-medium">Socials</h3>
               <p>Find us across social platforms and feel free to reach out!</p>
               <div className="flex items-center gap-5 pt-2">
