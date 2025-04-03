@@ -34,9 +34,9 @@ const AboutPage = () => {
 
   return (
     <>
-      <section className="mt-20 px-8 pt-5 md:pt-10">
+      <section className="mt-28 md:mt-20 px-8  md:pt-10">
         <h1 className="mx-auto mt-10 pb-5 text-center text-3xl font-semibold leading-snug md:px-28 md:text-5xl lg:max-w-[650px] lg:px-0">
-          Revolutionizing Sustainable Living, one Fresh Product at a Time
+          Sustainable Living, one Fresh Product at a Time
         </h1>
         <p className="mx-auto text-center text-gray-700 md:px-28 lg:max-w-[700px] lg:px-0">
           At Grevego, we are building a future where sustainability meets

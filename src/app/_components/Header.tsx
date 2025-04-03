@@ -13,7 +13,7 @@ const Header = () => {
   const router = useRouter();
   const pathname = usePathname();
   return (
-    <nav className="flex  w-full  items-center justify-between px-5 pt-8  xl:px-20 bg-white pb-2 z-20 fixed">
+    <nav className="flex  w-full  items-center justify-between px-5 py-4 lg:py-6 xl:px-20 bg-white  z-20 fixed lg:relative">
       <div className="lg:gap-x-13 flex items-center gap-x-5">
         <Logo width={100} height={100} />
 

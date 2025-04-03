@@ -127,7 +127,7 @@ const AgentPage = () => {
   ];
   return (
     <>
-      <section className="mt-24 px-5 md:px-10   lg:px-0">
+      <section className="mt-20 md:mt-24 px-5 md:px-10   lg:px-0">
         <div className="mt-10 flex flex-col items-center gap-6 pb-20 ">
           <h2 className="max-w-[700px] px-5 text-center text-2xl pt-10 font-semibold text-gray-700 md:px-0 md:text-6xl md:leading-[5rem]">
             Grow your <span className="text-[#ffb84d]">Business</span> with

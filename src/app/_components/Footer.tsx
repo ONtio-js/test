@@ -39,7 +39,7 @@ const Footer = () => {
           <FeatureCard title="Clean Energy Solutions" />
         </div>
         <div className="relative my-20 overflow-y-hidden">
-          <div className="no-scrollbar  flex items-center gap-4 overflow-x-scroll lg:justify-center">
+          <div className="no-scrollbar flex items-center gap-4 overflow-x-scroll lg:justify-center">
             <Image
               src={"/home/test-3.svg"}
               alt="hero"
@@ -77,20 +77,21 @@ const Footer = () => {
           </div>
           <div className="mx-5 flex max-w-[900px] flex-col items-center border-2 border-dashed border-white p-10 md:mx-20 md:p-20 lg:mx-auto">
             <p className="text-center text-white">
-              “Since joining Grevego, my sales have doubled, and I’ve built a
-              loyal customer base that values sustainability!”
+              “Grevego is committed to strengthening Africa’s fresh produce
+              supply chain through responsible, technical solutions that support
+              communities and economics.”
             </p>
             <div className="mt-20 flex flex-col items-center gap-2">
               <Image
-                src={"/home/user-2.jpeg"}
+                src={"/home/user.svg"}
                 alt="hero"
                 width={40}
                 height={40}
                 className="h-10 w-10 rounded-full"
               />
               <div className="flex flex-col items-center gap-2">
-                <h3 className="text-xl font-semibold text-white">John Doe</h3>
-                <p className="text-white">CEO, FruityLife</p>
+                <h3 className="text-xl font-semibold text-white">Samuel Efosa-Austin</h3>
+                <p className="text-white">President, TECH4GOOD Africa</p>
               </div>
             </div>
           </div>
@@ -132,22 +133,20 @@ const Footer = () => {
                 <Link href={"/market"}>Explore market place</Link>
               </li>
               <li>
-                <Link href={"/blog"}>join as a vendor</Link>
+                <Link href={"/vendor"}>Join as a vendor</Link>
               </li>
             </ul>
             <ul className="flex flex-col gap-3">
               <h3 className="text-lg font-semibold capitalize">Legal</h3>
               <li>
-                <Link href={"/about"}>Privacy policy</Link>
+                <Link href={"/privacy"}>Privacy policy</Link>
               </li>
               <li>
-                <Link href={"/blog"}>Terms of use</Link>
+                <Link href={"/terms"}>Terms of use</Link>
               </li>
-              <li>
-                <Link href={"/contact"}>Conditions</Link>
-              </li>
+           
             </ul>
-            <div className="flex flex-col gap-y-3 md:col-span-2 mt-10 md:mt-0">
+            <div className="mt-10 flex flex-col gap-y-3 md:col-span-2 md:mt-0">
               <h3 className="text-lg font-semibold capitalize">
                 Sustainable Digest
               </h3>
@@ -163,7 +162,7 @@ const Footer = () => {
                   name="email"
                   placeholder="Enter your email"
                 />
-                <button className="rounded-full  bg-primaryColor px-3 py-[6px] text-white">
+                <button className="rounded-full bg-primaryColor px-3 py-[6px] text-white">
                   Subscribe
                 </button>
               </div>

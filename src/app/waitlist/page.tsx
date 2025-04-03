@@ -7,8 +7,8 @@ export const metadata: Metadata = {
 }
 const page = () => {
   return (
-    <div className="mt-24 md:pt-10 px-5 md:px-20 pb-10">
-      <h1 className="text-center text-4xl font-bold capitalize text-gray-700">
+    <div className="mt-20 md:pt-10 px-5 md:px-20 pb-10">
+      <h1 className="text-center pt-10 text-3xl md:text-5xl font-bold capitalize text-gray-700">
         get early access
       </h1>
       <p className='text-center py-10 text-gray-70'>

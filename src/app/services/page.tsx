@@ -31,9 +31,9 @@ const page = () => {
   ];
   return (
     <>
-      <section className="pt-5 md:pt-10 md:px-10 mt-20 lg:px-0">
+      <section className="pt-10 md:pt-10 md:px-10 mt-20 lg:px-0">
         <div className="md:mt-10 flex flex-col items-center gap-6 pb-20 ">
-          <h2 className="text-center text-2xl font-semibold text-gray-700 sm:px-20 md:text-5xl md:leading-[3rem] lg:max-w-[800px]">
+          <h2 className="text-center text-3xl font-semibold text-gray-700 sm:px-20 md:text-5xl md:leading-[3rem] lg:max-w-[800px]">
             <span className="text-[#ffb84d]">Innovative solutions</span> for a
             Greener Future
           </h2>

@@ -126,8 +126,8 @@ const VendorPage = () => {
   return (
     <>
       <section>
-        <div className="mt-20 md:pt-10 pt-5 flex flex-col items-center gap-6 pb-20 ">
-          <h2 className="max-w-[600px] px-10 text-center text-3xl font-semibold text-gray-700 md:px-0 md:leading-[5rem] lg:text-6xl">
+        <div className="mt-16 md:mt-20 md:pt-10 pt-5 flex flex-col items-center gap-6 pb-20 ">
+          <h2 className="max-w-[600px] px-10 pt-10 text-center text-3xl font-semibold text-gray-700 md:px-0 md:leading-[5rem] lg:text-6xl">
             Earn on{" "}
             <span className="capitalize text-[#ffb84d]">your terms</span> with
             Grevego
