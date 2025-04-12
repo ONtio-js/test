@@ -34,7 +34,7 @@ const AboutPage = () => {
 
   return (
     <>
-      <section className="mt-28 md:mt-20 px-8  md:pt-10">
+      <section className="mt-28 lg:-mt-10 px-8  md:pt-10">
         <h1 className="mx-auto mt-10 pb-5 text-center text-3xl font-semibold leading-snug md:px-28 md:text-5xl lg:max-w-[650px] lg:px-0">
           Sustainable Living, one Fresh Product at a Time
         </h1>
