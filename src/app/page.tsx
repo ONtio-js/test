@@ -3,6 +3,7 @@ import { useRouter } from "next/navigation";
 import Button from "./_components/Button";
 import FeatureCard from "./_components/FeatureCard";
 import Image from "next/image";
+import { CldImage } from "next-cloudinary";
 export default  function Home() {
   const features = [
     {
@@ -54,9 +55,9 @@ export default  function Home() {
   return (
     <>
       {/* begining of hero section */}
-      <section className="w-full pt-16 md:pt-10 pb-10">
-        <div className="lg:px-30 flex flex-col items-center md:pt-10 lg:pt-0 gap-2 px-10">
-          <h1 className="max-w-[500px] pt-10 md:pt-4 pb-4 text-center text-3xl font-bold md:text-5xl md:leading-snug text-gray-800">
+      <section className="w-full pb-10 pt-16 md:pt-10">
+        <div className="lg:px-30 flex flex-col items-center gap-2 px-10 md:pt-10 lg:pt-0">
+          <h1 className="max-w-[500px] pb-4 pt-10 text-center text-3xl font-bold text-gray-800 md:pt-4 md:text-5xl md:leading-snug">
             Healthy Food, Sustainable Future
           </h1>
           <p className="text-center text-sm text-gray-700">
@@ -82,7 +83,9 @@ export default  function Home() {
         <div className="relative my-16 w-full overflow-y-hidden">
           <div className="no-scrollbar flex items-center gap-3 overflow-y-hidden overflow-x-scroll md:gap-7 lg:justify-center">
             <Image
-              src={"/home/hero2.svg"}
+              src={
+                "https://res.cloudinary.com/dm2pa4nll/grevego/hero/hero2.svg"
+              }
               alt="hero"
               width={600}
               height={200}
@@ -90,17 +93,22 @@ export default  function Home() {
               priority
             />
             <Image
-              src={"/home/hero-1.svg"}
+              src={
+                "https://res.cloudinary.com/dm2pa4nll/grevego/hero/hero-1.svg"
+              }
               alt="hero"
               width={600}
               height={100}
               className="w-[300px] md:w-full"
               priority
             />
+
             <Image
-              src={"/home/hero.svg"}
+              src={
+                "https://res.cloudinary.com/dm2pa4nll/grevego/hero/hero3.png"
+              }
               alt="hero"
-              width={600}
+              width={1000}
               height={200}
               className="w-[300px] md:w-full"
               priority
@@ -124,10 +132,7 @@ export default  function Home() {
         </div>
         <div className="grid gap-10 px-5 pt-10 md:px-20 lg:grid-cols-3">
           {features.map((feature) => (
-            <div
-              key={feature.id}
-              className="rounded-xl p-5 shadow-lg "
-            >
+            <div key={feature.id} className="rounded-xl p-5 shadow-lg">
               <Image
                 src={feature.imgUrl}
                 alt={feature.title}
@@ -224,7 +229,7 @@ export default  function Home() {
             healthier planet.
           </p>
         </div>
-        <div className="flex items-center pt-10 lg:gap-4 overflow-x-scroll no-scrollbar md:justify-center ">
+        <div className="no-scrollbar flex items-center overflow-x-scroll pt-10 md:justify-center lg:gap-4">
           <FeatureCard colored title="Reduce Food Waste" />
           <FeatureCard colored title="Support Vendors" />
           <FeatureCard colored title="Personalized Nutrition" />
