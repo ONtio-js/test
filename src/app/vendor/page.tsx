@@ -143,18 +143,23 @@ const AgentPage = () => {
             title="Sign Up as a Vendor"
             style="  rounded-full w-[250px] mt-10"
             type="link"
+            url="#vendorForm"
           />
         </div>
         <div className="no-scrollbar mb-20 flex min-w-[600px] gap-10 overflow-x-scroll sm:justify-center">
           <Image
-            src={"/home/agent-2.jpeg"}
+            src={
+              "https://res.cloudinary.com/dm2pa4nll/grevego/vendor/agent2.jpg"
+            }
             alt="agent"
             width={500}
             height={100}
             className="w-[20rem] rounded-3xl lg:w-[40%]"
           />
           <Image
-            src={"/home/agent-1.jpeg"}
+            src={
+              "https://res.cloudinary.com/dm2pa4nll/grevego/vendor/agent-1.jpeg"
+            }
             alt="agent"
             width={500}
             height={100}
@@ -199,7 +204,9 @@ const AgentPage = () => {
         </div>
         <div className="mb-20 grid items-center gap-10 md:grid-cols-2">
           <Image
-            src={"/home/agent-3.jpeg"}
+            src={
+              "https://res.cloudinary.com/dm2pa4nll/grevego/vendor/agent-3.jpeg"
+            }
             width={600}
             height={100}
             alt=""
@@ -227,7 +234,7 @@ const AgentPage = () => {
           </div>
         </div>
 
-        <div className="flex flex-col items-center pt-10 md:pt-32">
+        <div className="flex flex-col items-center pt-10 md:pt-32" id="vendorForm">
           <div>
             <h2 className="text-4xl font-semibold capitalize text-gray-700">
               start selling today

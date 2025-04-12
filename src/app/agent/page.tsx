@@ -126,7 +126,7 @@ const VendorPage = () => {
   return (
     <>
       <section>
-        <div className="mt-16 lg:-mt-10 md:pt-10 pt-5 flex flex-col items-center gap-6 pb-20 ">
+        <div className="mt-16 flex flex-col items-center gap-6 pb-20 pt-5 md:pt-10 lg:-mt-10">
           <h2 className="max-w-[600px] px-10 pt-10 text-center text-3xl font-semibold text-gray-700 md:px-0 md:leading-[5rem] lg:text-6xl">
             Earn on{" "}
             <span className="capitalize text-[#ffb84d]">your terms</span> with
@@ -141,11 +141,12 @@ const VendorPage = () => {
             title="Become a Delivery Partner"
             style="  rounded-full mt-10"
             type="link"
+            url="#agentForm"
           />
         </div>
         <div className="mb-20 flex justify-center gap-10 px-5 md:px-20 lg:px-0">
           <Image
-            src={"/home/vendor-1.png"}
+            src={"https://res.cloudinary.com/dm2pa4nll/grevego/agent/vendor-1.png"}
             alt="agent"
             width={900}
             height={100}
@@ -210,7 +211,7 @@ const VendorPage = () => {
             </div>
           </div>
           <Image
-            src={"/home/vendor-2.png"}
+            src={"https://res.cloudinary.com/dm2pa4nll/grevego/agent/vendor-2.png"}
             width={600}
             height={100}
             alt=""
@@ -218,7 +219,7 @@ const VendorPage = () => {
           />
         </div>
 
-        <div className="flex flex-col items-center py-10 md:py-32">
+        <div className="flex flex-col items-center py-10 md:py-32" id="agentForm">
           <div>
             <h2 className="text-center text-2xl font-semibold text-gray-700 md:text-4xl">
               Join the Grevego Delivery Team
@@ -227,7 +228,7 @@ const VendorPage = () => {
               your information
             </h4>
           </div>
-         <AgentForm />
+          <AgentForm />
         </div>
       </section>
     </>

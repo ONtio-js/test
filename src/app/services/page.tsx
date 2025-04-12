@@ -75,7 +75,7 @@ const page = () => {
           />
           <Image
             src={
-              "https://res.cloudinary.com/dm2pa4nll/grevego/service/service-hero-4.jpeg"
+              "https://res.cloudinary.com/dm2pa4nll/grevego/service/service-hero-4.png"
             }
             alt="agent"
             width={190}
