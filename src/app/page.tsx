@@ -3,7 +3,6 @@ import { useRouter } from "next/navigation";
 import Button from "./_components/Button";
 import FeatureCard from "./_components/FeatureCard";
 import Image from "next/image";
-import { CldImage } from "next-cloudinary";
 export default  function Home() {
   const features = [
     {
