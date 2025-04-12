@@ -41,21 +41,21 @@ const Footer = () => {
         <div className="relative my-20 overflow-y-hidden">
           <div className="no-scrollbar flex items-center gap-4 overflow-x-scroll lg:justify-center">
             <Image
-              src={"/home/test-3.svg"}
+              src={"https://res.cloudinary.com/dm2pa4nll/grevego/footer-1.png"}
               alt="hero"
               width={600}
               height={200}
               className="w-[300px] md:w-full"
             />
             <Image
-              src={"/home/test-2.svg"}
+              src={"https://res.cloudinary.com/dm2pa4nll/grevego/footer-2.png"}
               alt="hero"
               width={500}
               height={200}
               className="w-[300px] md:w-full"
             />
             <Image
-              src={"/home/test-1.svg"}
+              src={"https://res.cloudinary.com/dm2pa4nll/grevego/footer-3.png"}
               alt="hero"
               width={600}
               height={200}
@@ -90,7 +90,9 @@ const Footer = () => {
                 className="h-10 w-10 rounded-full"
               />
               <div className="flex flex-col items-center gap-2">
-                <h3 className="text-xl font-semibold text-white">Samuel Efosa-Austin</h3>
+                <h3 className="text-xl font-semibold text-white">
+                  Samuel Efosa-Austin
+                </h3>
                 <p className="text-white">President, TECH4GOOD Africa</p>
               </div>
             </div>
@@ -144,7 +146,6 @@ const Footer = () => {
               <li>
                 <Link href={"/terms"}>Terms of use</Link>
               </li>
-           
             </ul>
             <div className="mt-10 flex flex-col gap-y-3 md:col-span-2 md:mt-0">
               <h3 className="text-lg font-semibold capitalize">
@@ -222,7 +223,12 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <Image src={"/logo2x.svg"} width={600} height={600} alt="grevego" />
+        <Image
+          src={"https://res.cloudinary.com/dm2pa4nll/grevego/logo.svg"}
+          width={600}
+          height={600}
+          alt="grevego"
+        />
       </footer>
     </>
   );

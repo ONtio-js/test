@@ -58,21 +58,25 @@ const page = () => {
             className="h-[309px] w-[260px] rounded-3xl"
           />
           <Image
-            src={"/home/services/service-hero-2.jpeg"}
+            src={"https://res.cloudinary.com/dm2pa4nll/grevego/service/service-hero-2.jpeg"}
             alt="agent"
             width={190}
             height={100}
             className="h-44 rounded-3xl lg:w-[20%]"
           />
           <Image
-            src={"/home/services/service-hero-3.jpeg"}
+            src={
+              "https://res.cloudinary.com/dm2pa4nll/grevego/service/service-hero-3.jpeg"
+            }
             alt="agent"
             width={500}
             height={100}
             className="h-[309px] w-[260px] rounded-3xl"
           />
           <Image
-            src={"/home/services/service-hero-4.jpeg"}
+            src={
+              "https://res.cloudinary.com/dm2pa4nll/grevego/service/service-hero-4.jpeg"
+            }
             alt="agent"
             width={190}
             height={100}
@@ -106,7 +110,9 @@ const page = () => {
           </div>
           <div>
             <Image
-              src={"/home/services/service-1.png"}
+              src={
+                "https://res.cloudinary.com/dm2pa4nll/grevego/service/service-1.png"
+              }
               alt="delivery"
               width={700}
               height={100}
@@ -130,7 +136,9 @@ const page = () => {
           </div>
           <div>
             <Image
-              src={"/home/services/service-2.png"}
+              src={
+                "https://res.cloudinary.com/dm2pa4nll/grevego/service/service-2.png"
+              }
               alt="delivery"
               width={700}
               height={100}
@@ -151,7 +159,9 @@ const page = () => {
           </div>
           <div>
             <Image
-              src={"/home/services/service-3.png"}
+              src={
+                "https://res.cloudinary.com/dm2pa4nll/grevego/service/service-3.png"
+              }
               alt="delivery"
               width={700}
               height={100}

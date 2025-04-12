@@ -1,1 +1,0 @@
-{ "multipass": true, "plugins": [ { "name": "preset-default", "params": { "overrides": { "cleanupNumericValues": { "floatPrecision": 2 }, "convertPathData": true, "mergePaths": true, "removeViewBox": true, "removeUselessDefs": true, "removeEmptyAttrs": true, "removeEmptyContainers": true, "removeDimensions": true } } } ] }

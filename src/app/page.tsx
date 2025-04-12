@@ -83,17 +83,17 @@ export default  function Home() {
           <div className="no-scrollbar flex items-center gap-3 overflow-y-hidden overflow-x-scroll md:gap-7 lg:justify-center">
             <Image
               src={
-                "https://res.cloudinary.com/dm2pa4nll/grevego/hero/hero2.svg"
+                "https://res.cloudinary.com/dm2pa4nll/grevego/hero/hero-1.png"
               }
               alt="hero"
               width={600}
               height={200}
               className="w-[300px] md:w-full"
-              priority
+              loading="lazy"
             />
             <Image
               src={
-                "https://res.cloudinary.com/dm2pa4nll/grevego/hero/hero-1.svg"
+                "https://res.cloudinary.com/dm2pa4nll/grevego/hero/hero-2.png"
               }
               alt="hero"
               width={600}
@@ -104,7 +104,7 @@ export default  function Home() {
 
             <Image
               src={
-                "https://res.cloudinary.com/dm2pa4nll/grevego/hero/hero3.png"
+                "https://res.cloudinary.com/dm2pa4nll/grevego/hero/hero-3.png"
               }
               alt="hero"
               width={1000}
@@ -281,7 +281,9 @@ export default  function Home() {
         <div className="my-10 flex flex-col items-center gap-5">
           <div className="relative">
             <Image
-              src={"/globe.png"}
+              src={
+                "https://res.cloudinary.com/dm2pa4nll/grevego/globe.png"
+              }
               width={800}
               height={800}
               alt="world globe"

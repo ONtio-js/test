@@ -34,7 +34,7 @@ const AboutPage = () => {
 
   return (
     <>
-      <section className="mt-28 lg:-mt-10 px-8  md:pt-10">
+      <section className="mt-28 px-8 md:pt-10 lg:-mt-10">
         <h1 className="mx-auto mt-10 pb-5 text-center text-3xl font-semibold leading-snug md:px-28 md:text-5xl lg:max-w-[650px] lg:px-0">
           Sustainable Living, one Fresh Product at a Time
         </h1>
@@ -46,7 +46,9 @@ const AboutPage = () => {
         <ButtonComponent />
         <div className="mt-16 flex items-center justify-center">
           <Image
-            src={"/home/about/about-hero.png"}
+            src={
+              "https://res.cloudinary.com/dm2pa4nll/grevego/about/about-hero.png"
+            }
             width={1000}
             height={100}
             alt="about-hero"
@@ -117,60 +119,62 @@ const AboutPage = () => {
           </p>
         </div>
         <div className="grid gap-4 pt-20 md:grid-cols-2 lg:grid-cols-4 lg:gap-8 lg:px-20">
-          {ourDefinition.map((how: {id:number;title:string;description:string}) => (
-            <div
-              key={how.id}
-              className="relative h-56 overflow-hidden rounded-2xl bg-primaryColor p-5 text-white"
-            >
-              <h3 className="text-2xl font-medium">{how.title}</h3>
-              <p className="py-2 text-sm">{how.description}</p>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="100"
-                height="80"
-                viewBox="0 0 107 108"
-                fill="none"
-                className="absolute -right-2 bottom-0"
+          {ourDefinition.map(
+            (how: { id: number; title: string; description: string }) => (
+              <div
+                key={how.id}
+                className="relative h-56 overflow-hidden rounded-2xl bg-primaryColor p-5 text-white"
               >
-                <path
-                  d="M31.5644 31.9999L129.627 158.957"
-                  stroke="#CEDDD0"
-                  stroke-width="62.6795"
-                  stroke-linecap="round"
-                />
-              </svg>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="100"
-                height="80"
-                viewBox="0 0 107 108"
-                fill="none"
-                className="absolute -right-14 top-24"
-              >
-                <path
-                  d="M31.5644 31.9999L129.627 158.957"
-                  stroke="#CEDDD0"
-                  stroke-width="62.6795"
-                  stroke-linecap="round"
-                />
-              </svg>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="100"
-                height="80"
-                viewBox="0 0 107 108"
-                fill="none"
-                className="absolute -bottom-10 right-12"
-              >
-                <path
-                  d="M31.5644 31.9999L129.627 158.957"
-                  stroke="#CEDDD0"
-                  stroke-width="62.6795"
-                  stroke-linecap="round"
-                />
-              </svg>
-            </div>
-          ))}
+                <h3 className="text-2xl font-medium">{how.title}</h3>
+                <p className="py-2 text-sm">{how.description}</p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="100"
+                  height="80"
+                  viewBox="0 0 107 108"
+                  fill="none"
+                  className="absolute -right-2 bottom-0"
+                >
+                  <path
+                    d="M31.5644 31.9999L129.627 158.957"
+                    stroke="#CEDDD0"
+                    stroke-width="62.6795"
+                    stroke-linecap="round"
+                  />
+                </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="100"
+                  height="80"
+                  viewBox="0 0 107 108"
+                  fill="none"
+                  className="absolute -right-14 top-24"
+                >
+                  <path
+                    d="M31.5644 31.9999L129.627 158.957"
+                    stroke="#CEDDD0"
+                    stroke-width="62.6795"
+                    stroke-linecap="round"
+                  />
+                </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="100"
+                  height="80"
+                  viewBox="0 0 107 108"
+                  fill="none"
+                  className="absolute -bottom-10 right-12"
+                >
+                  <path
+                    d="M31.5644 31.9999L129.627 158.957"
+                    stroke="#CEDDD0"
+                    stroke-width="62.6795"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+            ),
+          )}
         </div>
         <div className="mt-24 flex flex-col items-center gap-7 px-5 text-gray-700">
           <h2 className="text-center text-xl font-semibold md:text-3xl">
@@ -184,7 +188,7 @@ const AboutPage = () => {
             change.
           </p>
           <Image
-            src={"/home/team/team-all.png"}
+            src={"https://res.cloudinary.com/dm2pa4nll/grevego/about/teamall.png"}
             width={1000}
             height={200}
             alt="our team"

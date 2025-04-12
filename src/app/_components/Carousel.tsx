@@ -48,7 +48,7 @@ const Carousel = () => {
       <Slider {...settings} className="flex items-center">
         <div className="">
           <Image
-            src={"/home/about/about-1.png"}
+            src={"https://res.cloudinary.com/dm2pa4nll/grevego/about/about-1.png"}
             alt="about"
             width={500}
             height={500}
@@ -57,7 +57,9 @@ const Carousel = () => {
         </div>
         <div>
           <Image
-            src={"/home/about/about-2.png"}
+            src={
+              "https://res.cloudinary.com/dm2pa4nll/grevego/about/about-2.png"
+            }
             alt="about"
             width={500}
             height={100}
@@ -66,7 +68,9 @@ const Carousel = () => {
         </div>
         <div>
           <Image
-            src={"/home/about/about-3.png"}
+            src={
+              "https://res.cloudinary.com/dm2pa4nll/grevego/about/about-3.png"
+            }
             alt="about"
             width={500}
             height={500}
@@ -75,7 +79,9 @@ const Carousel = () => {
         </div>
         <div className="">
           <Image
-            src={"/home/about/about-4.png"}
+            src={
+              "https://res.cloudinary.com/dm2pa4nll/grevego/about/about-4.png"
+            }
             alt="about"
             width={500}
             height={500}
@@ -84,7 +90,9 @@ const Carousel = () => {
         </div>
         <div>
           <Image
-            src={"/home/about/about-5.png"}
+            src={
+              "https://res.cloudinary.com/dm2pa4nll/grevego/about/about-5.png"
+            }
             alt="about"
             width={500}
             height={500}
@@ -93,7 +101,9 @@ const Carousel = () => {
         </div>
         <div>
           <Image
-            src={"/home/about/about-6.png"}
+            src={
+              "https://res.cloudinary.com/dm2pa4nll/grevego/about/about-6.png"
+            }
             alt="about"
             width={500}
             height={500}
