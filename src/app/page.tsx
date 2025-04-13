@@ -67,8 +67,8 @@ export default  function Home() {
             <Button
               title="Join waitlist"
               variant="primary"
-              type="link"
-              onclick={() => router.push("/waitlist")}
+            
+              onclick={() => router.push("waitlist")}
               style="w-[250px] md:max-w-[300px] py-4"
             />
           </div>
@@ -294,7 +294,7 @@ export default  function Home() {
           <div className="flex items-center gap-10">
             <Button
               title="Join as a Vendor"
-              type="link"
+         
               variant="secondary"
               onclick={() => router.push("/vendor")}
             />

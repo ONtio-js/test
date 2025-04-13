@@ -26,7 +26,7 @@ const Footer = () => {
           <Button
             title="Become a Partner"
             variant="secondary"
-            type="link"
+        
             style="text-white border-white mt-10"
             secondary={false}
             onclick={() => router.push("/agent")}
