@@ -67,7 +67,6 @@ export default  function Home() {
             <Button
               title="Join waitlist"
               variant="primary"
-            
               onclick={() => router.push("waitlist")}
               style="w-[250px] md:max-w-[300px] py-4"
             />
@@ -120,13 +119,14 @@ export default  function Home() {
       {/* beginning of features section */}
       <section className="">
         <div className="flex flex-col items-center gap-5 py-5 md:py-10">
-          <h2 className="text-2xl font-semibold capitalize">
+          <h2 className="text-2xl font-semibold capitalize text-gray-800 md:text-3xl">
             our smart solution
           </h2>
-          <p className="px-2 text-center text-gray-700 md:px-10 lg:px-0">
+          <p className="max-w-[690px] px-2 text-center text-gray-700 md:px-10 lg:px-0">
             Grevego combines innovation and sustainability to make healthy
-            living effortless—personalized nutrition, eco-friendly delivery, and
-            zero-waste solutions, all in one place.
+            living effortless , { " " }
+            personalized nutrition, eco-friendly delivery, and zero-waste
+            solutions, all in one place.
           </p>
         </div>
         <div className="grid gap-10 px-5 pt-10 md:px-20 lg:grid-cols-3">
@@ -151,7 +151,7 @@ export default  function Home() {
 
       <section className="px-5 py-20 md:px-20">
         <div className="flex flex-col items-start gap-4 pb-10">
-          <h2 className="text-xl font-semibold capitalize">
+          <h2 className="text-2xl font-semibold capitalize text-gray-800 md:text-3xl">
             sustainability made simple
           </h2>
           <p className="text-gray-700">
@@ -218,7 +218,7 @@ export default  function Home() {
 
       <section className="bg-secondaryColor/50 px-5 py-20 md:px-10 lg:px-20">
         <div className="flex flex-col items-center gap-5">
-          <h2 className="py-3 text-2xl font-semibold text-gray-700 md:text-center md:text-3xl">
+          <h2 className="py-3 text-2xl font-semibold text-gray-800 md:text-center md:text-3xl">
             Building a Greener Tomorrow
           </h2>
           <p className="max-w-[900px] text-center text-gray-700">
@@ -268,7 +268,7 @@ export default  function Home() {
 
       <section className="px-5 py-32 md:px-20">
         <div className="flex flex-col items-center gap-7">
-          <h2 className="max-w-[1000px] text-center text-2xl font-semibold text-gray-600 md:text-3xl lg:text-5xl">
+          <h2 className="max-w-[1000px] text-center text-2xl font-semibold text-gray-800 md:text-3xl lg:text-3xl">
             Join the Movement for a Healthier, Greener World
           </h2>
           <p className="max-w-[900px] text-center text-gray-600">
@@ -278,25 +278,22 @@ export default  function Home() {
             healthier planet.
           </p>
         </div>
-        <div className="my-10 flex flex-col items-center gap-5">
-          <div className="relative">
+        <div className="mt-10 flex flex-col items-center gap-5">
+          <div className="relative flex w-full flex-col items-center">
+            <div className="flex w-full items-center justify-center gap-10">
+              <Button
+                title="Join as a Vendor"
+                variant="secondary"
+                onclick={() => router.push("/vendor")}
+              />
+            </div>
             <Image
-              src={
-                "https://res.cloudinary.com/dm2pa4nll/grevego/globe.png"
-              }
+              src={"https://res.cloudinary.com/dm2pa4nll/grevego/globe.png"}
               width={800}
               height={800}
               alt="world globe"
               className="my-10"
               priority
-            />
-          </div>
-          <div className="flex items-center gap-10">
-            <Button
-              title="Join as a Vendor"
-         
-              variant="secondary"
-              onclick={() => router.push("/vendor")}
             />
           </div>
         </div>

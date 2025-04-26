@@ -10,9 +10,9 @@ const ButtonComponent = () => {
       <Button
         title="Join the Movement"
         variant="primary"
-        type="link"
+      
         style=""
-        onclick={() => router.push('/waitlist')}
+        onclick={() => router.push('waitlist')}
       />
     </div>
   );
