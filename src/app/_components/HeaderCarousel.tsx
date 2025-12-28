@@ -24,7 +24,7 @@ const HeaderCarousel = () => {
   ];
 
   return (
-    <div className="relative w-full overflow-hidden">
+    <div className="relative w-full overflow-hidden sm:hidden">
       <Swiper
         modules={[Autoplay, Pagination, Navigation]}
         autoplay={{ delay: 2500, disableOnInteraction: false }}
