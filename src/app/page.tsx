@@ -7,6 +7,8 @@ import { motion } from "framer-motion";
 import HeaderCarousel from "./_components/HeaderCarousel";
 import Link from "next/link";
 import { ArrowRightIcon } from "lucide-react";
+
+import { blogPosts } from "@/content/blog-posts";
 export default  function Home() {
  const features = [
    {
@@ -285,84 +287,34 @@ export default  function Home() {
             movement.
           </p>
           <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
-            <div className="flex flex-col gap-5 rounded-lg bg-gray-50 p-4">
-              <Image
-                src={"/home/blog.jpg"}
-                width={300}
-                height={100}
-                alt="x"
-                className="h-full w-full rounded-lg object-cover"
-              />
-              <div className="flex flex-col gap-2">
-                <h3 className="text-lg font-semibold">
-                  How to Make Your Business More Sustainable: 5 Easy Steps
-                </h3>
-                <p>
-                  Discover practical tips to reduce your environmental impact
-                  and enhance your business’s sustainability.
-                </p>
-                <p className="text-sm text-muted-foreground">July 11, 2025</p>
-              </div>
-              <Link
-                href={"/blog"}
-                className="mt-10 flex max-w-[150px] items-center gap-2 rounded-full border border-gray-300 bg-white px-4 py-2"
+            {blogPosts.slice(0, 3).map((post) => (
+              <div
+                key={post.slug}
+                className="flex flex-col gap-5 rounded-lg bg-gray-50 p-4"
               >
-                <p className="text-gray-800">Read More</p>
-                <ArrowRightIcon className="w-4 text-gray-800" />
-              </Link>
-            </div>
-            <div className="flex flex-col gap-5 rounded-lg bg-gray-50 p-4">
-              <Image
-                src={"/home/blog.jpg"}
-                width={300}
-                height={100}
-                alt="x"
-                className="h-full w-full rounded-lg object-cover"
-              />
-              <div className="flex flex-col gap-2">
-                <h3 className="text-lg font-semibold">
-                  How to Make Your Business More Sustainable: 5 Easy Steps
-                </h3>
-                <p>
-                  Discover practical tips to reduce your environmental impact
-                  and enhance your business’s sustainability.
-                </p>
-                <p className="text-sm text-muted-foreground">July 11, 2025</p>
+                <Image
+                  src={post.imageSrc}
+                  width={300}
+                  height={100}
+                  alt={post.imageAlt}
+                  className="h-full w-full rounded-lg object-cover"
+                />
+                <div className="flex flex-col gap-2">
+                  <h3 className="text-lg font-semibold">{post.title}</h3>
+                  <p>{post.subtitle}</p>
+                  <p className="text-sm text-muted-foreground">
+                    {post.dateLabel}
+                  </p>
+                </div>
+                <Link
+                  href={`/blogs/${post.slug}`}
+                  className="mt-10 flex max-w-[150px] items-center gap-2 rounded-full border border-gray-300 bg-white px-4 py-2"
+                >
+                  <p className="text-gray-800">Read More</p>
+                  <ArrowRightIcon className="w-4 text-gray-800" />
+                </Link>
               </div>
-              <Link
-                href={"/blog"}
-                className="mt-10 flex max-w-[150px] items-center gap-2 rounded-full border border-gray-300 bg-white px-4 py-2"
-              >
-                <p className="text-gray-800">Read More</p>
-                <ArrowRightIcon className="w-4 text-gray-800" />
-              </Link>
-            </div>{" "}
-            <div className="flex flex-col gap-5 rounded-lg bg-gray-50 p-4">
-              <Image
-                src={"/home/blog.jpg"}
-                width={300}
-                height={100}
-                alt="x"
-                className="h-full w-full rounded-lg object-cover"
-              />
-              <div className="flex flex-col gap-2">
-                <h3 className="text-lg font-semibold">
-                  How to Make Your Business More Sustainable: 5 Easy Steps
-                </h3>
-                <p>
-                  Discover practical tips to reduce your environmental impact
-                  and enhance your business’s sustainability.
-                </p>
-                <p className="text-sm text-muted-foreground">July 11, 2025</p>
-              </div>
-              <Link
-                href={"/blog"}
-                className="mt-10 flex max-w-[150px] items-center gap-2 rounded-full border border-gray-300 bg-white px-4 py-2"
-              >
-                <p className="text-gray-800">Read More</p>
-                <ArrowRightIcon className="w-4 text-gray-800" />
-              </Link>
-            </div>
+            ))}
           </div>
         </div>
       </section>

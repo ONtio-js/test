@@ -17,51 +17,21 @@ import {
 } from "@/components/ui/select";
 import { motion } from "framer-motion";
 
+import { getListedBlogPosts } from "@/content/blog-posts";
+
 const BlogsPage = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const slides = [
-    {
-      src: "/home/blog.jpg",
-      alt: "Grevego Journal",
-      title: "How to Make Your Business More Sustainable: 5 Easy Steps",
-      subtitle:
-        "Sustainable Freshness, delivered with Care at your doorstep via cold last mile delivery network",
-      description:
-        "Discover practical tips to reduce your environmental impact and enhance your business’s sustainability. With our solar-powered cold storage and sustainable logistics, we guarantee that your fresh produce arrives at its best. This not only minimizes food waste but also cuts down on carbon emissions, making a positive impact on the environment.",
-      date: "July 11, 2025",
-    },
-    {
-      src: "/home/blog.jpg",
-      alt: "Grevego Journal",
-      title: "Eco-Friendly Solutions for a Sustainable Future",
-      subtitle:
-        "Sustainable Freshness, delivered with Care at your doorstep via cold last mile delivery network",
-      description:
-        "Discover practical tips to reduce your environmental impact and enhance your business’s sustainability. With our solar-powered cold storage and sustainable logistics, we guarantee that your fresh produce arrives at its best. This not only minimizes food waste but also cuts down on carbon emissions, making a positive impact on the environment.",
-      date: "July 11, 2025",
-    },
-    {
-      src: "/home/blog.jpg",
-      alt: "Grevego Journal",
-      title: "How to Make Your Business More Sustainable: 5 Easy Steps",
-      subtitle:
-        "Sustainable Freshness, delivered with Care at your doorstep via cold last mile delivery network",
-      description:
-        "Discover practical tips to reduce your environmental impact and enhance your business’s sustainability. With our solar-powered cold storage and sustainable logistics, we guarantee that your fresh produce arrives at its best. This not only minimizes food waste but also cuts down on carbon emissions, making a positive impact on the environment.",
-      date: "July 11, 2025",
-    },
-    {
-      src: "/home/blog.jpg",
-      alt: "Grevego Journal",
-      title: "How to Make Your Business More Sustainable: 5 Easy Steps",
-      subtitle:
-        "Sustainable Freshness, delivered with Care at your doorstep via cold last mile delivery network",
-      description:
-        "Discover practical tips to reduce your environmental impact and enhance your business’s sustainability. With our solar-powered cold storage and sustainable logistics, we guarantee that your fresh produce arrives at its best. This not only minimizes food waste but also cuts down on carbon emissions, making a positive impact on the environment.",
-      date: "July 11, 2025",
-    },
-  ];
+  const listedPosts = getListedBlogPosts();
+  const slides = listedPosts.map((post) => ({
+    slug: post.slug,
+    src: post.imageSrc,
+    alt: post.imageAlt,
+    title: post.title,
+    subtitle: post.subtitle,
+    description: post.excerpt,
+    date: post.dateLabel,
+  }));
 
   const handleSlide = (direction: "next" | "prev" | number) => {
     if (typeof direction === "number") {
@@ -74,11 +44,15 @@ const BlogsPage = () => {
   };
 
   useEffect(() => {
+    if (slides.length === 0) return;
+    setCurrentSlide((prev) => (prev >= slides.length ? 0 : prev));
+  }, [slides.length]);
 
+  useEffect(() => {
+    if (slides.length === 0) return;
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 5000);
-
     return () => clearInterval(interval);
   }, [slides.length]);
 
@@ -107,11 +81,18 @@ const BlogsPage = () => {
           <div className="flex items-center gap-4">
             
             <div className="rounded-full border border-gray-300 px-4 py-2">
-              {currentSlide + 1} of {slides.length}
+              {slides.length === 0
+                ? "0 of 0"
+                : `${currentSlide + 1} of ${slides.length}`}
             </div>
           </div>
         </div>
         <div className="justify- no-scrollbar mt-10 flex md:min-w-[1200px] min-w-full gap-6 overflow-x-scroll">
+          {slides.length === 0 ? (
+            <p className="text-gray-600">
+              No published articles yet. Check back soon.
+            </p>
+          ) : null}
           {slides[currentSlide] && (
             <motion.div initial={{ opacity: 0, x: -100 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }} className="flex md:w-[1200px] w-full md:min-w-[1200px] flex-col items-start justify-between md:gap-10 gap-5 rounded-3xl bg-gray-100 p-5 md:p-10 transition-all duration-500 ease-in-out">
               <Image
@@ -137,7 +118,7 @@ const BlogsPage = () => {
                 </p>
 
                 <Link
-                  href={"/blogs/" + slides[currentSlide].title}
+                  href={`/blogs/${slides[currentSlide]?.slug ?? ""}`}
                   className="mt-10 flex max-w-[150px] items-center gap-2 rounded-full border border-gray-300 bg-primaryColor px-4 py-3 md:max-w-[150px]"
                 >
                   <p className="text-white">Read More</p>
@@ -147,7 +128,8 @@ const BlogsPage = () => {
               </motion.div>
           )}
 
-          {slides[(currentSlide + 1) % slides.length] && (
+          {slides.length > 1 &&
+            slides[(currentSlide + 1) % slides.length] && (
             <div
               onClick={() => handleSlide("next")}
               className="hidden md:flex w-[1200px] min-w-[1200px] cursor-pointer flex-col items-start justify-between gap-10 rounded-3xl bg-gray-100 p-10 opacity-70 transition-all duration-500 ease-in-out hover:bg-gray-200 hover:opacity-100"
@@ -192,7 +174,10 @@ const BlogsPage = () => {
             <div
               className="h-full rounded-full bg-primaryColor transition-all duration-300"
               style={{
-                width: `${((currentSlide + 1) / slides.length) * 100}%`,
+                width:
+                  slides.length === 0
+                    ? "0%"
+                    : `${((currentSlide + 1) / slides.length) * 100}%`,
               }}
             ></div>
           </div>
@@ -248,32 +233,34 @@ const BlogsPage = () => {
           </div>
         </div>
         <div className="mt-10 grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
-          <div className="flex flex-col gap-5 rounded-lg bg-gray-50 p-4 transition-all duration-300 hover:bg-primaryColor/30">
-            <Image
-              src={"/home/blog.jpg"}
-              width={300}
-              height={100}
-              alt="x"
-              className="h-full w-full rounded-lg object-cover"
-            />
-            <div className="flex flex-col gap-2">
-              <h3 className="text-lg font-semibold">
-                How to Make Your Business More Sustainable: 5 Easy Steps
-              </h3>
-              <p>
-                Discover practical tips to reduce your environmental impact and
-                enhance your business’s sustainability.
-              </p>
-              <p className="text-sm text-muted-foreground">July 11, 2025</p>
-            </div>
-            <Link
-              href={"/blog"}
-              className="mt-10 flex max-w-[150px] items-center gap-2 rounded-full border border-gray-300 bg-white px-4 py-2"
+          {listedPosts.map((post) => (
+            <div
+              key={post.slug}
+              className="flex flex-col gap-5 rounded-lg bg-gray-50 p-4 transition-all duration-300 hover:bg-primaryColor/30"
             >
-              <p className="text-gray-800">Read More</p>
-              <ArrowRightIcon className="w-4 text-gray-800" />
-            </Link>
-          </div>
+              <Image
+                src={post.imageSrc}
+                width={300}
+                height={100}
+                alt={post.imageAlt}
+                className="h-full w-full rounded-lg object-cover"
+              />
+              <div className="flex flex-col gap-2">
+                <h3 className="text-lg font-semibold">{post.title}</h3>
+                <p>{post.excerpt}</p>
+                <p className="text-sm text-muted-foreground">
+                  {post.dateLabel}
+                </p>
+              </div>
+              <Link
+                href={`/blogs/${post.slug}`}
+                className="mt-10 flex max-w-[150px] items-center gap-2 rounded-full border border-gray-300 bg-white px-4 py-2"
+              >
+                <p className="text-gray-800">Read More</p>
+                <ArrowRightIcon className="w-4 text-gray-800" />
+              </Link>
+            </div>
+          ))}
         </div>
         <div className="my-10 flex items-center justify-center gap-10">
           <div className="hidden w-[130px] cursor-pointer items-center justify-center rounded-full bg-primaryColor/90 px-10 py-3 text-white transition-all duration-300 hover:bg-primaryColor">
