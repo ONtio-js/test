@@ -96,7 +96,7 @@ const HowItWorksPage = () => {
         {howItWorks.map((how) => (
           <div
             key={how.id}
-            className={`flex w-full items-center gap-x-20 ${how.id % 2 === 0 ? "flex-col md:flex-row" : "flex-col md:flex-row-reverse"}`}
+            className={`flex w-full items-center gap-x-20 gap-y-5 ${how.id % 2 === 0 ? "flex-col md:flex-row" : "flex-col md:flex-row-reverse"}`}
           >
             <motion.div initial={{ opacity: 0, x: (how.id + 1) % 2 === 0 ? -100 : 100 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -150,8 +150,8 @@ const HowItWorksPage = () => {
             one plan, and one community at a time.
           </p>
           <div className="flex flex-col md:flex-row items-center gap-4">
-            <Button variant="secondary" title="Become a Partner" url="/vendor" style="" secondary />
-            <Button variant="primary" secondary title="Try Grevego" url="/" style="" />
+            <Button variant="secondary" title="Become a Partner" url="/vendor" style="" type="link" />
+            <Button variant="primary"  title="Try Grevego" url="/" style="" type="link" />
           </div>
         </div>
       </section>
