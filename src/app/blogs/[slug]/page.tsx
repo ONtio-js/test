@@ -52,7 +52,7 @@ export default async function BlogPage({ params }: PageProps) {
         </div>
       </div>
 
-      <BlogPostBody slug={post.slug} />
+      {post.body ?? <BlogPostBody slug={post.slug} />}
 
       <BlogEngagementBar
         baseLikes={post.baseLikes}

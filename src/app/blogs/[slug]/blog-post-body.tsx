@@ -147,36 +147,101 @@ function NutritionHabitsBody() {
   );
 }
 
-function EcoFriendlyBody() {
+function HealthyEatingBody() {
   return (
     <article className="mt-10 space-y-6 text-base leading-7 text-gray-700 lg:mx-auto lg:max-w-3xl">
       <p>
-        Building a sustainable future starts with everyday choices—in how we
-        grow, move, store, and enjoy food. Grevego focuses on solutions that keep
-        produce fresh for longer while reducing waste and emissions.
+        I get it, life’s busy You wake up already late, rush through your
+        morning, and before you know it, it is afternoon and you have not eaten
+        anything meaningful. By evening, you are tired, hungry, and the easiest
+        option is whatever is fast and available. This is the reality for a lot
+        of people. And over time, it starts to feel like healthy eating is only
+        for people who have time. But as a nutritionist, I can tell you this
+        Healthy eating is not about having more time It is about using the
+        little time you have more intentionally
       </p>
       <section className="space-y-3">
-        <h2 className="text-xl font-semibold text-gray-900">Cold storage that scales</h2>
+        <h2 className="text-xl font-semibold text-gray-900">
+          The Role of Eating Patterns in Daily Nutrition.
+        </h2>
         <p>
-          Solar-assisted and efficient cold storage helps protect perishables in
-          transit and at hubs, so less food is lost before it reaches kitchens
-          and tables.
+          One thing I have noticed is that busy people do not necessarily eat
+          badly on purpose It usually starts with skipping meals Then grabbing
+          whatever is available Then eating too much later because you are
+          overly hungry It becomes a cycle And the issue is not just the food It
+          is the pattern
         </p>
       </section>
       <section className="space-y-3">
-        <h2 className="text-xl font-semibold text-gray-900">Smarter logistics</h2>
+        <h2 className="text-xl font-semibold text-gray-900">
+          Adopting Practical and Sustainable Meal Habits
+        </h2>
         <p>
-          Route planning, reliable last-mile cooling, and partnerships with
-          trusted vendors combine to shorten the gap between harvest and home—
-          good for nutrition and for the planet.
+          You do not need to suddenly become someone who cooks three perfect
+          meals every day Start with what is realistic for your lifestyle If
+          mornings are always rushed, find one quick breakfast you can rely on
+          Bread and egg Oatmeal Yogurt and fruit Leftover rice or yam from the
+          night before Something simple is always better than nothing
         </p>
       </section>
       <section className="space-y-3">
-        <h2 className="text-xl font-semibold text-gray-900">What you can do</h2>
+        <h2 className="text-xl font-semibold text-gray-900">
+          Structuring Your Environment for Better Food Choices
+        </h2>
         <p>
-          Choose suppliers who prioritize waste reduction, buy what you can use,
-          and store food properly. Small shifts in how businesses and households
-          operate add up to meaningful change.
+          When you are busy, convenience always wins So instead of relying on
+          willpower, make healthy options easier for yourself Keep fruits where
+          you can see them Have groundnuts or yogurt within reach Cook simple
+          meals that you can reheat without stress When food is easy to access,
+          you are more likely to eat better
+        </p>
+      </section>
+
+      {/* TODO: Add the rest of the body */}
+      <section className="space-y-3">
+        <h2 className="text-xl font-semibold text-gray-900">
+          Managing Hunger to Prevent Poor Food Choices
+        </h2>
+        <p>
+          One of the biggest mistakes I see is waiting until you are extremely
+          hungry At that point, you are not thinking about balance You just want
+          food and you want it fast Try to eat before you get to that point Even
+          if it is something small, it helps you stay in control of your choices
+        </p>
+      </section>
+
+      <section className="space-y-3">
+        <h2 className="text-xl font-semibold text-gray-900">
+          Improving Meal Quality Without Overcomplicating It
+        </h2>
+        <p>
+          Every meal does not have to be perfect to be healthy What matters is
+          that you are trying to include a mix of foods when you can A simple
+          plate of rice becomes better when you add vegetables and some protein
+          Bread becomes better when you pair it with eggs instead of just spread
+          Small upgrades make a big difference over time
+        </p>
+      </section>
+
+      <section className="space-y-3">
+        <h2 className="text-xl font-semibold text-gray-900">
+          Creating Structure Without Dietary Pressure
+        </h2>
+        <p>
+          Healthy eating on a busy schedule is not about doing everything right
+          It is about having a loose structure that guides you Eat something in
+          the morning Do not go too long without food Add something nutritious
+          when you can That is enough to start with
+        </p>
+      </section>
+
+      <section className="space-y-3">
+        <h2 className="text-xl font-semibold text-gray-900">Final Thoughts</h2>
+        <p>
+          You do not need a perfect routine to eat well You just need a system
+          that works for your real life Because at the end of the day, healthy
+          eating is not about having time It is about making better choices
+          within the time you already have
         </p>
       </section>
     </article>
@@ -262,8 +327,8 @@ export function BlogPostBody({ slug }: BlogPostBodyProps) {
   switch (slug) {
     case "everyday-nutrition-habits-without-dieting":
       return <NutritionHabitsBody />;
-    case "eco-friendly-solutions-sustainable-future":
-      return <EcoFriendlyBody />;
+    case "healthy-eating-on-a-busy-schedule":
+      return <HealthyEatingBody />;
     case "business-more-sustainable-five-easy-steps":
       return <BusinessSustainableBody />;
     case "sustainable-freshness-cold-delivery":

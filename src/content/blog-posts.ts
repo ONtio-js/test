@@ -1,3 +1,5 @@
+import type { ReactNode } from "react";
+
 export type BlogAuthor = {
   name: string;
   bio: string;
@@ -31,6 +33,8 @@ export type BlogPost = {
   shareText: string;
   author: BlogAuthor;
   show: boolean;
+  /** Optional article body. Omit to use the default body for this slug in `BlogPostBody`. */
+  body?: ReactNode;
 };
 
 export const blogPosts: BlogPost[] = [
@@ -52,21 +56,21 @@ export const blogPosts: BlogPost[] = [
     show: true,
   },
   {
-    slug: "eco-friendly-solutions-sustainable-future",
-    title: "Eco-Friendly Solutions for a Sustainable Future",
+    slug: "healthy-eating-on-a-busy-schedule",
+    title: "Healthy Eating on a Busy Schedule",
     subtitle:
-      "Sustainable freshness, delivered with care at your doorstep via a cold last-mile delivery network.",
+      "Tips for making nutritious meals even when time is tight.",
     excerpt:
-      "Discover practical tips to reduce your environmental impact and enhance your business’s sustainability. With our solar-powered cold storage and sustainable logistics, we guarantee that your fresh produce arrives at its best. This not only minimizes food waste but also cuts down on carbon emissions, making a positive impact on the environment.",
-    dateLabel: "July 11, 2025",
-    readMinutes: 4,
+      "Eating well doesn’t have to be complicated. Here’s how to fit healthy meals into your busy day.",
+    dateLabel: "April 18, 2026",
+    readMinutes: 5,
     imageSrc: "/home/blog.jpg",
-    imageAlt: "Grevego Journal — eco-friendly solutions",
-    baseLikes: 88,
+    imageAlt: "Grevego Journal — healthy eating",
+    baseLikes: 10,
     shareText:
-      "How Grevego combines cold chain logistics with lower environmental impact.",
+      "Healthy meals for busy schedules — from Grevego.",
     author: defaultBlogAuthor,
-    show: false,
+    show: true,
   },
   {
     slug: "business-more-sustainable-five-easy-steps",
